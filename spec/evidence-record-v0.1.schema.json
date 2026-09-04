@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/spec/evidence-record-v0.1.schema.json",
+  "title": "Evidence-bound atomic output record",
+  "description": "Field-level evidence record for the SUM-20 P1 pilot. The JSON Pointer MUST resolve to a scalar value in the canonical entry identified by entry_id and content_sha256.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version","id_profile","evidence_id","release_id","entry_id","content_sha256","json_pointer","target_type","target_hash_profile","target_sha256"],
+  "properties": {
+    "schema_version": {"const": "evidence-record-v0.1"},
+    "id_profile": {"const": "ev1-jcs-sha256"},
+    "evidence_id": {"type": "string", "pattern": "^ev1-[0-9a-f]{64}$"},
+    "release_id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*-r[0-9]{3}$"},
+    "entry_id": {"type": "string", "pattern": "^sum20-hist-ap-[0-9]{3}$"},
+    "content_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "json_pointer": {"type": "string", "pattern": "^/(?:[^~/]|~0|~1)*(?:/(?:[^~/]|~0|~1)*)*$"},
+    "target_type": {"enum": ["string", "number", "boolean", "null"]},
+    "target_hash_profile": {"const": "jcs-sha256"},
+    "target_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}
