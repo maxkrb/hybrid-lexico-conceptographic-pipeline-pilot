@@ -1,0 +1,29 @@
+# Hybrid Lexico-Conceptographic Pipeline — Pilot Reproducibility Package
+
+Public reproducibility package for the paper:
+
+**A Hybrid Lexico-Conceptographic Pipeline with Evidence-Bound Outputs and a Tamper-Evident Blockchain-Ready Release Registry: A Pilot Study**
+
+This repository contains the frozen schemas, pilot data, deterministic generators, evaluation manifests, integrity verifiers, GitHub Actions workflows, and supplementary appendices required to reproduce the reported P1 and P3 experiments.
+
+## Frozen pilot
+
+- dataset: `sum20-hist-ap-pilot-v0`
+- release: `sum20-hist-ap-pilot-r001`
+- canonical entries: 25
+- Evidence Records: 840
+- P1 query set: 50 Q+ and 13 Q-
+- P1 evidence-corruption cases: 45
+- P3 release-tamper cases: 30
+- Merkle root: `03f36166f45c268d7c8ce4468de6c64dbc884705dd21ab581ee38377da7d3ae2`
+- release manifest JCS SHA-256: `3a8285f98363363345f52f5e4438b04ad06e0f3397add75a25c08efcf2fbef94`
+
+## Reproducibility scope
+
+The package is intentionally narrower than the private development repository. It excludes internal planning files, roadmaps, task lists, handoff notes, superseded manuscript drafts, and other development-only material.
+
+The public package preserves the exact machine-readable inputs and outputs used by the reported experiments, including a separate pre-hardening P1 runtime snapshot so that the unchanged 45-case fault corpus can be evaluated against both the original and hardened resolver implementations.
+
+## Rights
+
+No open-source or open-data license is granted. See `RIGHTS.md`. Citation of the paper and repository is permitted; no additional permission to copy, redistribute, modify, or reuse the code, data, or documentation is granted except where required by applicable law or by GitHub's Terms of Service.
