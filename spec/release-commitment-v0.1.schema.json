@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/spec/release-commitment-v0.1.schema.json",
+  "title": "SUM-20 pilot release commitment",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["commitment_version","release_id","release_json","canonicalization","hash_algorithm","release_json_sha256","merkle_root","signature_status"],
+  "properties": {
+    "commitment_version": {"const": "release-commitment-v0.1"},
+    "release_id": {"type": "string", "pattern": "^sum20-hist-ap-pilot-r[0-9]{3}$"},
+    "release_json": {"const": "data/pilot/release/release.json"},
+    "canonicalization": {"const": "RFC8785-JCS"},
+    "hash_algorithm": {"const": "SHA-256"},
+    "release_json_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "merkle_root": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "signature_status": {"enum": ["not_implemented", "present"]}
+  }
+}
