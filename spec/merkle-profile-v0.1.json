@@ -1,0 +1,20 @@
+{
+  "profile_id": "merkle-profile-v0.1",
+  "purpose": "Deterministic release-level Merkle commitment for frozen SUM-20 pilot entries.",
+  "hash_algorithm": "SHA-256",
+  "entry_order": "ascending UTF-8 byte order of entry_id",
+  "leaf": {
+    "encoding": "RFC8785-JCS",
+    "domain": "hybrid-lexico-conceptographic-pipeline/merkle/leaf/v1",
+    "preimage_fields": ["domain", "entry_id", "content_sha256"],
+    "formula": "SHA256(JCS({domain,entry_id,content_sha256}))"
+  },
+  "internal_node": {
+    "encoding": "RFC8785-JCS",
+    "domain": "hybrid-lexico-conceptographic-pipeline/merkle/node/v1",
+    "preimage_fields": ["domain", "left_sha256", "right_sha256"],
+    "formula": "SHA256(JCS({domain,left_sha256,right_sha256}))"
+  },
+  "odd_node_rule": "duplicate_last",
+  "root_encoding": "lowercase hex without sha256: prefix"
+}
