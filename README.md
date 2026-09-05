@@ -24,6 +24,24 @@ The package is intentionally narrower than the private development repository. I
 
 The public package preserves the exact machine-readable inputs and outputs used by the reported experiments, including a separate pre-hardening P1 runtime snapshot so that the unchanged 45-case fault corpus can be evaluated against both the original and hardened resolver implementations.
 
+## Package integrity
+
+The portable SHA-256 manifest is `reproducibility/PACKAGE-FILES.sha256`.
+
+From the repository root:
+
+```bash
+sha256sum -c reproducibility/PACKAGE-FILES.sha256
+```
+
+The manifest covers all 112 package files other than the manifest itself.
+
+## Trust boundary
+
+The implemented pilot is tamper-evident within the evaluated threat profiles and produces an externally anchorable, blockchain-ready release commitment. It does not implement blockchain anchoring, an on-chain registry, a smart contract, or a digital-signature/key-management mechanism. The release commitment records `signature_status` as `not_implemented`.
+
+GitHub Actions provides executable reproducibility and provenance for the reported pipeline but is not treated as an independent cryptographic trust anchor.
+
 ## Rights
 
 No open-source or open-data license is granted. See `RIGHTS.md`. Citation of the paper and repository is permitted; no additional permission to copy, redistribute, modify, or reuse the code, data, or documentation is granted except where required by applicable law or by GitHub's Terms of Service.
