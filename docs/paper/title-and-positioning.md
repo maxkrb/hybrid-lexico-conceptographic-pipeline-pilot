@@ -96,11 +96,15 @@ GitHub Actions provides executable reproducibility and provenance for the report
 
 ## Signing wording rule
 
-The current release commitment records `signature_status=not_implemented`.
+The current release commitment explicitly records `signature_status` as `not_implemented`; therefore, no digital signature or key-management mechanism is claimed as part of the implemented pilot.
 
 Allowed future-oriented formulations:
 
-- `optionally signable release commitment`;
-- `an off-chain signature may authenticate the publisher in a future extension`.
+- `release commitment designed to support optional future signing`;
+- `an off-chain digital signature may authenticate the publisher in a future extension`.
 
-Avoid `signed release manifest` as a current-result phrase.
+Avoid as current-result formulations:
+
+- `signed release commitment`;
+- `signed release manifest`;
+- `cryptographically authenticated publisher`.
