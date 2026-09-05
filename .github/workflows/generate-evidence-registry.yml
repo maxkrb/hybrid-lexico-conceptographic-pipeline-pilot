@@ -1,0 +1,37 @@
+name: Generate evidence registry
+
+on:
+  push:
+    branches: [publication-package-staging]
+    paths:
+      - 'data/pilot/canonical/**'
+      - 'data/pilot/pre-release/content-hashes.json'
+      - 'data/pilot/pre-release/release-reservation.json'
+      - 'data/pilot/pre-release/evidence-registry.json'
+      - 'scripts/generate_evidence_registry.py'
+      - 'spec/evidence-record-v0.1.schema.json'
+      - 'spec/publishable-field-profile-v0.1.json'
+      - 'requirements-pilot.txt'
+      - '.github/workflows/generate-evidence-registry.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  generate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements-pilot.txt
+      - name: Generate deterministic P1 evidence registry
+        run: python scripts/generate_evidence_registry.py
+      - name: Rebuild and compare byte-for-byte
+        run: python scripts/generate_evidence_registry.py --check
+      - name: Verify generated artifacts match committed snapshot
+        run: git diff --exit-code -- data/pilot/pre-release/evidence-registry.json
