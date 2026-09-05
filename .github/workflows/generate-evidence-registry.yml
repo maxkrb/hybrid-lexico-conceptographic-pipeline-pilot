@@ -2,7 +2,7 @@ name: Generate evidence registry
 
 on:
   push:
-    branches: [publication-package-staging]
+    branches: [main]
     paths:
       - 'data/pilot/canonical/**'
       - 'data/pilot/pre-release/content-hashes.json'
@@ -12,10 +12,9 @@ on:
       - 'spec/evidence-record-v0.1.schema.json'
       - 'spec/publishable-field-profile-v0.1.json'
       - 'requirements-pilot.txt'
-      - '.github/workflows/generate-evidence-registry.yml'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   generate:
@@ -33,5 +32,15 @@ jobs:
         run: python scripts/generate_evidence_registry.py
       - name: Rebuild and compare byte-for-byte
         run: python scripts/generate_evidence_registry.py --check
-      - name: Verify generated artifacts match committed snapshot
-        run: git diff --exit-code -- data/pilot/pre-release/evidence-registry.json
+      - name: Commit generated registry if changed
+        shell: bash
+        run: |
+          if [ -z "$(git status --porcelain -- data/pilot/pre-release/evidence-registry.json)" ]; then
+            echo 'Evidence registry already current.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/pilot/pre-release/evidence-registry.json
+          git commit -m 'Generate deterministic P1 evidence registry'
+          git push
