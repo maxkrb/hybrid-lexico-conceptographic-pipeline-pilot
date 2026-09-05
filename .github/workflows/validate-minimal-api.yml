@@ -1,0 +1,64 @@
+name: Validate minimal P1 API
+
+on:
+  push:
+    paths:
+      - 'src/minimal_api.py'
+      - 'tests/test_minimal_api.py'
+      - 'data/pilot/canonical/**'
+      - 'data/pilot/pre-release/evidence-registry.json'
+      - 'data/pilot/pre-release/release-reservation.json'
+      - 'requirements-pilot.txt'
+      - '.github/workflows/validate-minimal-api.yml'
+  pull_request:
+    paths:
+      - 'src/minimal_api.py'
+      - 'tests/test_minimal_api.py'
+      - 'data/pilot/canonical/**'
+      - 'data/pilot/pre-release/evidence-registry.json'
+      - 'data/pilot/pre-release/release-reservation.json'
+      - 'requirements-pilot.txt'
+      - '.github/workflows/validate-minimal-api.yml'
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned pilot dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements-pilot.txt
+      - name: Load frozen API state
+        run: python src/minimal_api.py --check
+      - name: Run API contract tests
+        run: python -m unittest discover -s tests -p 'test_minimal_api.py' -v
+      - name: HTTP smoke test
+        shell: bash
+        run: |
+          python src/minimal_api.py --host 127.0.0.1 --port 8765 >/tmp/minimal-api.log 2>&1 &
+          API_PID=$!
+          trap 'kill $API_PID 2>/dev/null || true' EXIT
+          python - <<'PY'
+          import json
+          import time
+          import urllib.request
+
+          url = 'http://127.0.0.1:8765/v1/health'
+          last_error = None
+          for _ in range(20):
+              try:
+                  with urllib.request.urlopen(url, timeout=2) as response:
+                      payload = json.load(response)
+                  assert payload['status'] == 'ok'
+                  assert payload['release_id'] == 'sum20-hist-ap-pilot-r001'
+                  assert payload['entry_count'] == 25
+                  assert payload['evidence_record_count'] == 840
+                  break
+              except Exception as exc:
+                  last_error = exc
+                  time.sleep(0.2)
+          else:
+              raise SystemExit(f'HTTP smoke test failed: {last_error}')
+          PY
