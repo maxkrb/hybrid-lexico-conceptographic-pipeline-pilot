@@ -40,7 +40,7 @@ All 25 pilot entries conform to `lex-entry-v0.4`:
 }
 ```
 
-The raw source remains a separate immutable artifact.
+The raw source remains a separate retained artifact whose byte content is bound by `raw_sha256`.
 
 ## A.2 Entry content commitment
 
@@ -243,7 +243,7 @@ Frozen root:
 03f36166f45c268d7c8ce4468de6c64dbc884705dd21ab581ee38377da7d3ae2
 ```
 
-## A.12 External release commitment
+## A.12 Externally anchorable release commitment
 
 ```json
 {
@@ -258,7 +258,7 @@ Frozen root:
 }
 ```
 
-No digital signature or blockchain transaction is claimed in this pilot.
+The implemented pilot does not include a digital-signature or key-management mechanism, blockchain anchoring, an on-chain registry, or a smart contract.
 
 ## A.13 P3 exact tamper set
 
@@ -319,4 +319,4 @@ PYTHONPATH=. python scripts/evaluate_release_tamper.py
 
 ## A.16 Security boundary
 
-The P3 hash/Merkle verifier detects the versioned 30-case selective tamper profile relative to the retained frozen baseline. A fully coordinated replacement of every local source, hash manifest, release manifest, root, and unsigned commitment can be made internally self-consistent. Detecting that stronger attack requires an independently retained commitment, authenticated signature, transparency log, or future blockchain anchor.
+The P3 hash/Merkle verifier detects the versioned 30-case selective tamper profile relative to the retained frozen baseline. A fully coordinated replacement of every local source, hash manifest, release manifest, root, and unsigned commitment can be made internally self-consistent. Detecting that stronger attack requires independent retention or authentication of the compact release commitment, for example through a publisher digital signature, transparency log, institutional timestamp or publication record, or future blockchain anchoring.
