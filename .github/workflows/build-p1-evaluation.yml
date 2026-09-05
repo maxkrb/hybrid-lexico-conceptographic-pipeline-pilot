@@ -1,0 +1,44 @@
+name: Build P1 evaluation set
+
+on:
+  push:
+    branches: [publication-package-staging]
+    paths:
+      - 'src/minimal_api.py'
+      - 'scripts/generate_eval_query_set.py'
+      - 'scripts/evaluate_p1.py'
+      - 'eval/**'
+      - 'data/pilot/canonical/**'
+      - 'data/pilot/pre-release/evidence-registry.json'
+      - 'requirements-pilot.txt'
+      - '.github/workflows/build-p1-evaluation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned pilot dependencies
+        run: python -m pip install -r requirements-pilot.txt
+      - name: Generate deterministic Q+/Q- set
+        run: python scripts/generate_eval_query_set.py
+      - name: Run deterministic P1 evaluation
+        run: python scripts/evaluate_p1.py
+      - name: Rebuild and compare byte-for-byte
+        shell: bash
+        run: |
+          cp eval/query-set-v0.1.json /tmp/query-set.json
+          cp eval/results-v0.1.json /tmp/results.json
+          python scripts/generate_eval_query_set.py
+          python scripts/evaluate_p1.py
+          cmp /tmp/query-set.json eval/query-set-v0.1.json
+          cmp /tmp/results.json eval/results-v0.1.json
+      - name: Verify generated artifacts match committed snapshot
+        run: git diff --exit-code -- eval/query-set-v0.1.json eval/results-v0.1.json
