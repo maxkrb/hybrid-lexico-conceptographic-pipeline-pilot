@@ -155,4 +155,4 @@ CI answers: **do these versioned inputs and rules reproduce the same outputs and
 
 External anchoring answers a different question: **can a later verifier determine that this release commitment existed outside a subsequently rewritten local repository?**
 
-The distinction is essential. GitHub Actions strengthens reproducibility, audit trails, and regression detection, but the paper does not use GitHub Actions as proof against a hypothetical attacker who can rewrite the complete repository history and every local unsigned commitment. The externally anchorable tuple `release_id + release_json_sha256 + merkle_root` is the intended boundary for that stronger trust function.
+The distinction is essential. GitHub Actions strengthens reproducibility, audit trails, and regression detection, but the paper does not use GitHub Actions as proof against a hypothetical attacker who can rewrite the complete repository history and every local unsigned commitment. The externally anchorable tuple `release_id + release_json_sha256 + merkle_root` is the compact object intended for independent retention or future external authentication or anchoring.
