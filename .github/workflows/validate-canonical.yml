@@ -1,0 +1,35 @@
+name: Validate canonical pilot
+
+on:
+  push:
+    paths:
+      - 'data/pilot/canonical/**'
+      - 'data/pilot/raw/**'
+      - 'spec/canonical-entry-v0.4.schema.json'
+      - 'scripts/validate_canonical.py'
+      - 'requirements-pilot.txt'
+      - '.github/workflows/validate-canonical.yml'
+  pull_request:
+    paths:
+      - 'data/pilot/canonical/**'
+      - 'data/pilot/raw/**'
+      - 'spec/canonical-entry-v0.4.schema.json'
+      - 'scripts/validate_canonical.py'
+      - 'requirements-pilot.txt'
+      - '.github/workflows/validate-canonical.yml'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements-pilot.txt
+      - name: Validate canonical SUM-20 pilot
+        run: python scripts/validate_canonical.py
