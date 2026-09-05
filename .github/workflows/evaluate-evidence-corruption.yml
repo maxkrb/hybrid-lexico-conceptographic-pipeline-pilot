@@ -1,0 +1,43 @@
+name: Evaluate evidence corruption
+
+on:
+  push:
+    branches: [publication-package-staging]
+    paths:
+      - 'eval/evidence-corruption-profile-v0.1.json'
+      - 'eval/evidence-corruption-cases-v0.1.json'
+      - 'scripts/generate_evidence_corruption_cases.py'
+      - 'scripts/evaluate_evidence_corruption.py'
+      - 'scripts/evaluate_evidence_corruption_post.py'
+      - 'src/minimal_api.py'
+      - 'data/pilot/pre-release/evidence-registry.json'
+      - 'data/pilot/pre-release/content-hashes.json'
+      - 'data/pilot/pre-release/release-reservation.json'
+      - 'data/pilot/canonical/**'
+      - '.github/workflows/evaluate-evidence-corruption.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned pilot dependencies
+        run: python -m pip install -r requirements-pilot.txt
+      - name: Generate exact deterministic fault case manifest
+        run: PYTHONPATH=. python scripts/generate_evidence_corruption_cases.py
+      - name: Run post-hardening fault injection experiment
+        run: PYTHONPATH=. python scripts/evaluate_evidence_corruption_post.py
+      - name: Rebuild fault cases and compare byte-for-byte
+        run: |
+          cp eval/evidence-corruption-cases-v0.1.json /tmp/evidence-corruption-cases-v0.1.json
+          PYTHONPATH=. python scripts/generate_evidence_corruption_cases.py
+          cmp /tmp/evidence-corruption-cases-v0.1.json eval/evidence-corruption-cases-v0.1.json
+      - name: Verify generated artifacts match committed snapshot
+        run: git diff --exit-code -- eval/evidence-corruption-cases-v0.1.json eval/evidence-corruption-results-posthardening-v0.1.json
