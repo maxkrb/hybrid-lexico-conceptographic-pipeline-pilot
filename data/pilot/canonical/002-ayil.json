@@ -1,0 +1,44 @@
+{
+  "schema_version": "lex-entry-v0.4",
+  "dataset_id": "sum20-hist-ap-pilot-v0",
+  "entry_id": "sum20-hist-ap-002",
+  "source": {
+    "raw_path": "data/pilot/raw/002-ayil.txt",
+    "raw_sha256": "a2dbfad2bbda0489d22dfaa44859b9f40ed5ee49172ef9b666bb49a4ac0182ef",
+    "source_file": "4e21e575-8d98-4c3b-82a1-8f023a00d1ca.docx"
+  },
+  "lemma": {"display": "АЇ́Л", "search": "АЇЛ", "variants": []},
+  "grammar": {
+    "pos": "NOUN",
+    "pos_status": "inferred_from_headword_morphology",
+    "gender": "masculine",
+    "gender_source": "ч.",
+    "genitive_source": "у"
+  },
+  "def_short": "У киргизів та алтайців у минулому – селище кочівників, звичайно населене членами однієї родини.",
+  "def_short_source_pointer": "/senses/0/definition",
+  "senses": [
+    {
+      "sense_id": "sum20-hist-ap-002-s1",
+      "labels_source": ["іст."],
+      "definition": "У киргизів та алтайців у минулому – селище кочівників, звичайно населене членами однієї родини.",
+      "examples": [{"example_id": "sum20-hist-ap-002-s1-e1", "text": "Тихий алтайський аїл, розкиданий по широкій долині, спав міцним сном", "source_ref": "В. Гжицький"}],
+      "cross_references": []
+    },
+    {
+      "sense_id": "sum20-hist-ap-002-s2",
+      "labels_source": ["іст."],
+      "definition": "У монгольських народів – кочова сімейна група.",
+      "examples": [{"example_id": "sum20-hist-ap-002-s2-e1", "text": "В армії Чингіcхана тисячі підрозділялися на сотні, які, у свою чергу, складалися з десятків (кочових груп – аїлів, які виставляли по 10 воїнів)", "source_ref": "з наук.-попул. літ."}],
+      "cross_references": []
+    },
+    {
+      "sense_id": "sum20-hist-ap-002-s3",
+      "labels_source": [],
+      "definition": "У Киргизстані – сільська адміністративно-територіальна одиниця.",
+      "examples": [{"example_id": "sum20-hist-ap-002-s3-e1", "text": "У міста, селища та аїли Киргизії прийшло радісне свято", "source_ref": "з газ."}],
+      "cross_references": []
+    }
+  ],
+  "phrases": []
+}

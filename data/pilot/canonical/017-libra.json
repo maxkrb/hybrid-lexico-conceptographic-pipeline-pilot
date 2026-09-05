@@ -1,0 +1,15 @@
+{
+  "schema_version": "lex-entry-v0.4",
+  "dataset_id": "sum20-hist-ap-pilot-v0",
+  "entry_id": "sum20-hist-ap-017",
+  "source": {"raw_path": "data/pilot/raw/017-libra.txt", "raw_sha256": "a631e7d2df7470816729eb36d393dea48a5b79b32f73cc2902fd70fcb49bc2cd", "source_file": "4e21e575-8d98-4c3b-82a1-8f023a00d1ca.docx"},
+  "lemma": {"display": "ЛІ́БРА", "search": "ЛІБРА", "variants": []},
+  "grammar": {"pos": "NOUN", "pos_status": "inferred_from_headword_morphology", "gender": "feminine", "gender_source": "ж.", "genitive_source": "и"},
+  "def_short": "Старовинна римська одиниця маси (приблизно 327,5 г).",
+  "def_short_source_pointer": "/senses/0/definition",
+  "senses": [
+    {"sense_id": "sum20-hist-ap-017-s1", "labels_source": [], "definition": "Старовинна римська одиниця маси (приблизно 327,5 г).", "examples": [{"example_id": "sum20-hist-ap-017-s1-e1", "text": "Одиницею маси в Стародавньому Римі була лібра – римський фунт, і тому перша монета – ас – важила цілий фунт", "source_ref": "з наук. літ."}], "cross_references": []},
+    {"sense_id": "sum20-hist-ap-017-s2", "labels_source": ["іст."], "definition": "Грошова одиниця Перу, яка перебувала в обігу в 1897–1930 рр.", "examples": [{"example_id": "sum20-hist-ap-017-s2-e1", "text": "Лібра приблизно дорівнювала англійському фунту стерлінгів", "source_ref": "з навч. літ."}], "cross_references": []}
+  ],
+  "phrases": []
+}

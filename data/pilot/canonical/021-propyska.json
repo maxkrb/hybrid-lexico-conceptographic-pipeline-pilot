@@ -1,0 +1,55 @@
+{
+  "schema_version": "lex-entry-v0.4",
+  "dataset_id": "sum20-hist-ap-pilot-v0",
+  "entry_id": "sum20-hist-ap-021",
+  "source": {
+    "raw_path": "data/pilot/raw/021-propyska.txt",
+    "raw_sha256": "0732359e758676384e51c610ad14542234354364abc63098276d79abcc2896a4",
+    "source_file": "4e21e575-8d98-4c3b-82a1-8f023a00d1ca.docx"
+  },
+  "lemma": {"display": "ПРОПИ́СКА", "search": "ПРОПИСКА", "variants": []},
+  "grammar": {"pos": "NOUN", "pos_status": "inferred_from_headword_morphology", "gender": "feminine", "gender_source": "ж.", "genitive_source": "и"},
+  "def_short": "Офіційна реєстрація за місцем проживання (в СРСР); оформлення документів на проживання.",
+  "def_short_source_pointer": "/senses/0/definition",
+  "senses": [
+    {
+      "sense_id": "sum20-hist-ap-021-s1",
+      "labels_source": [],
+      "definition": "Офіційна реєстрація за місцем проживання (в СРСР); оформлення документів на проживання.",
+      "examples": [
+        {"example_id": "sum20-hist-ap-021-s1-e1", "text": "– Цибулько Володимир Петрович, 1950 року народження. Місце народження – Коломия. Місце прописки – Львів, вулиця Князя Мстислава, 6 .. Так?", "source_ref": "Ю. Винничук"},
+        {"example_id": "sum20-hist-ap-021-s1-e2", "text": "Якщо прописка вважається однією з підстав для отримання житла або роботи, то вона порушує особисті немайнові права громадян", "source_ref": "з навч. літ."}
+      ],
+      "sub_senses": [
+        {
+          "sub_sense_id": "sum20-hist-ap-021-s1a",
+          "definition": "Відмітка в паспорті або іншому документі про офіційну реєстрацію за місцем проживання.",
+          "examples": [
+            {"example_id": "sum20-hist-ap-021-s1a-e1", "text": "Він.., взявши від Соньки її паспорта, записав серію, номер, прописку та інші дані", "source_ref": "В. Кучер"},
+            {"example_id": "sum20-hist-ap-021-s1a-e2", "text": "На паспорті [Сергія] нема київської прописки. Але зате серед папірців є квитанція про сплату за електроенергію в Києві", "source_ref": "В. Петльований"},
+            {"example_id": "sum20-hist-ap-021-s1a-e3", "text": "Санич узяв Віку за плече.., заліз до внутрішньої кишені її косухи і витяг паспорт. Подивився на прописку", "source_ref": "С. Жадан"}
+          ],
+          "cross_references": []
+        }
+      ],
+      "cross_references": []
+    },
+    {
+      "sense_id": "sum20-hist-ap-021-s2",
+      "labels_source": ["жив."],
+      "definition": "Те саме, що про́пис 4.",
+      "examples": [{"example_id": "sum20-hist-ap-021-s2-e1", "text": "У церкві святого Іоанна Предтечі у Керчі фрески виконано мінеральними фарбами по сирій штукатурці з подальшими пастозними прописками темперою по підсохлій поверхні", "source_ref": "з наук. літ."}],
+      "cross_references": [{"relation": "same_as", "target_display": "про́пис 4"}]
+    }
+  ],
+  "phrases": [
+    {
+      "phrase_id": "sum20-hist-ap-021-p1",
+      "display": "Лімі́тна пропи́ска",
+      "marker_source": "(1)",
+      "labels_source": ["іст."],
+      "definition": "Право на проживання у столиці чи іншому великому місті в обмін на непрестижну, низькооплачувану роботу.",
+      "examples": [{"example_id": "sum20-hist-ap-021-p1-e1", "text": "З часом лімітну прописку міняли на постійну, але – в тому самому гуртожитку", "source_ref": "А. Кокотюха"}]
+    }
+  ]
+}

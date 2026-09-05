@@ -1,0 +1,1170 @@
+{
+  "query_set_id": "p1-eval-qset-v0.1",
+  "release_id": "sum20-hist-ap-pilot-r001",
+  "dataset_id": "sum20-hist-ap-pilot-v0",
+  "api_contract": "minimal-evidence-bound-api-v0.1",
+  "construction_profile": "deterministic-from-frozen-r001-v0.1",
+  "ground_truth_policy": {
+    "Q+": "Queries whose requested atomic outputs are present in the frozen Evidence Registry and must be returned with evidence IDs.",
+    "Q-": "Syntactically valid queries for supported output type 'examples' that request one more evidence-bound example than is available; expected result is EVIDENCE_UNAVAILABLE.",
+    "excluded_from_Q-": "Entries with ten or more evidence-bound examples because the API maximum example_count is 10, so an over-request would become INVALID_EXAMPLE_COUNT rather than an evidence refusal."
+  },
+  "counts": {
+    "entries": 25,
+    "Q_positive": 50,
+    "Q_negative": 13,
+    "Q_total": 63
+  },
+  "entry_profiles": [
+    {
+      "entry_id": "sum20-hist-ap-001",
+      "lemma_search": "АБАК",
+      "available_evidence_bound_examples": 1
+    },
+    {
+      "entry_id": "sum20-hist-ap-002",
+      "lemma_search": "АЇЛ",
+      "available_evidence_bound_examples": 3
+    },
+    {
+      "entry_id": "sum20-hist-ap-003",
+      "lemma_search": "АКТ",
+      "available_evidence_bound_examples": 19
+    },
+    {
+      "entry_id": "sum20-hist-ap-004",
+      "lemma_search": "АРХЕТИП",
+      "available_evidence_bound_examples": 3
+    },
+    {
+      "entry_id": "sum20-hist-ap-005",
+      "lemma_search": "АУДИТОР",
+      "available_evidence_bound_examples": 4
+    },
+    {
+      "entry_id": "sum20-hist-ap-006",
+      "lemma_search": "БАЙДА",
+      "available_evidence_bound_examples": 4
+    },
+    {
+      "entry_id": "sum20-hist-ap-007",
+      "lemma_search": "БАКАЛАВР",
+      "available_evidence_bound_examples": 5
+    },
+    {
+      "entry_id": "sum20-hist-ap-008",
+      "lemma_search": "БІЛИЙ",
+      "available_evidence_bound_examples": 33
+    },
+    {
+      "entry_id": "sum20-hist-ap-009",
+      "lemma_search": "БОМБАРДИР",
+      "available_evidence_bound_examples": 4
+    },
+    {
+      "entry_id": "sum20-hist-ap-010",
+      "lemma_search": "БРИГАДА",
+      "available_evidence_bound_examples": 10
+    },
+    {
+      "entry_id": "sum20-hist-ap-011",
+      "lemma_search": "ГРАМОТА",
+      "available_evidence_bound_examples": 30
+    },
+    {
+      "entry_id": "sum20-hist-ap-012",
+      "lemma_search": "ЕТАП",
+      "available_evidence_bound_examples": 22
+    },
+    {
+      "entry_id": "sum20-hist-ap-013",
+      "lemma_search": "ЖАЛУВАТИ",
+      "available_evidence_bound_examples": 18
+    },
+    {
+      "entry_id": "sum20-hist-ap-014",
+      "lemma_search": "ЗИМОВИК",
+      "available_evidence_bound_examples": 2
+    },
+    {
+      "entry_id": "sum20-hist-ap-015",
+      "lemma_search": "КЛАС",
+      "available_evidence_bound_examples": 42
+    },
+    {
+      "entry_id": "sum20-hist-ap-016",
+      "lemma_search": "КНИГА",
+      "available_evidence_bound_examples": 40
+    },
+    {
+      "entry_id": "sum20-hist-ap-017",
+      "lemma_search": "ЛІБРА",
+      "available_evidence_bound_examples": 2
+    },
+    {
+      "entry_id": "sum20-hist-ap-018",
+      "lemma_search": "ОТАМАН",
+      "available_evidence_bound_examples": 22
+    },
+    {
+      "entry_id": "sum20-hist-ap-019",
+      "lemma_search": "ПРАВО",
+      "available_evidence_bound_examples": 77
+    },
+    {
+      "entry_id": "sum20-hist-ap-020",
+      "lemma_search": "ПРОМИСЕЛ",
+      "available_evidence_bound_examples": 21
+    },
+    {
+      "entry_id": "sum20-hist-ap-021",
+      "lemma_search": "ПРОПИСКА",
+      "available_evidence_bound_examples": 7
+    },
+    {
+      "entry_id": "sum20-hist-ap-022",
+      "lemma_search": "ПУДРА",
+      "available_evidence_bound_examples": 13
+    },
+    {
+      "entry_id": "sum20-hist-ap-023",
+      "lemma_search": "ПУШКАР",
+      "available_evidence_bound_examples": 9
+    },
+    {
+      "entry_id": "sum20-hist-ap-024",
+      "lemma_search": "П'ЯТИНА",
+      "available_evidence_bound_examples": 3
+    },
+    {
+      "entry_id": "sum20-hist-ap-025",
+      "lemma_search": "П'ЯТИРІЧКА",
+      "available_evidence_bound_examples": 7
+    }
+  ],
+  "Q_positive": [
+    {
+      "query_id": "Q+001",
+      "family": "core_fields_all_entries",
+      "lookup": "АБАК",
+      "lookup_mode": "lemma_search",
+      "fields": [
+        "lemma",
+        "pos",
+        "definition"
+      ],
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-001",
+        "claim_count": 3
+      }
+    },
+    {
+      "query_id": "Q+002",
+      "family": "available_examples",
+      "lookup": "sum20-hist-ap-001",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 1,
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-001",
+        "claim_count": 1,
+        "available_count": 1
+      }
+    },
+    {
+      "query_id": "Q+003",
+      "family": "core_fields_all_entries",
+      "lookup": "АЇЛ",
+      "lookup_mode": "lemma_search",
+      "fields": [
+        "lemma",
+        "pos",
+        "definition"
+      ],
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-002",
+        "claim_count": 3
+      }
+    },
+    {
+      "query_id": "Q+004",
+      "family": "available_examples",
+      "lookup": "sum20-hist-ap-002",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 2,
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-002",
+        "claim_count": 2,
+        "available_count": 3
+      }
+    },
+    {
+      "query_id": "Q+005",
+      "family": "core_fields_all_entries",
+      "lookup": "АКТ",
+      "lookup_mode": "lemma_search",
+      "fields": [
+        "lemma",
+        "pos",
+        "definition"
+      ],
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-003",
+        "claim_count": 3
+      }
+    },
+    {
+      "query_id": "Q+006",
+      "family": "available_examples",
+      "lookup": "sum20-hist-ap-003",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 2,
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-003",
+        "claim_count": 2,
+        "available_count": 19
+      }
+    },
+    {
+      "query_id": "Q+007",
+      "family": "core_fields_all_entries",
+      "lookup": "АРХЕТИП",
+      "lookup_mode": "lemma_search",
+      "fields": [
+        "lemma",
+        "pos",
+        "definition"
+      ],
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-004",
+        "claim_count": 3
+      }
+    },
+    {
+      "query_id": "Q+008",
+      "family": "available_examples",
+      "lookup": "sum20-hist-ap-004",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 2,
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-004",
+        "claim_count": 2,
+        "available_count": 3
+      }
+    },
+    {
+      "query_id": "Q+009",
+      "family": "core_fields_all_entries",
+      "lookup": "АУДИТОР",
+      "lookup_mode": "lemma_search",
+      "fields": [
+        "lemma",
+        "pos",
+        "definition"
+      ],
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-005",
+        "claim_count": 3
+      }
+    },
+    {
+      "query_id": "Q+010",
+      "family": "available_examples",
+      "lookup": "sum20-hist-ap-005",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 2,
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-005",
+        "claim_count": 2,
+        "available_count": 4
+      }
+    },
+    {
+      "query_id": "Q+011",
+      "family": "core_fields_all_entries",
+      "lookup": "БАЙДА",
+      "lookup_mode": "lemma_search",
+      "fields": [
+        "lemma",
+        "pos",
+        "definition"
+      ],
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-006",
+        "claim_count": 3
+      }
+    },
+    {
+      "query_id": "Q+012",
+      "family": "available_examples",
+      "lookup": "sum20-hist-ap-006",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 2,
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-006",
+        "claim_count": 2,
+        "available_count": 4
+      }
+    },
+    {
+      "query_id": "Q+013",
+      "family": "core_fields_all_entries",
+      "lookup": "БАКАЛАВР",
+      "lookup_mode": "lemma_search",
+      "fields": [
+        "lemma",
+        "pos",
+        "definition"
+      ],
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-007",
+        "claim_count": 3
+      }
+    },
+    {
+      "query_id": "Q+014",
+      "family": "available_examples",
+      "lookup": "sum20-hist-ap-007",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 2,
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-007",
+        "claim_count": 2,
+        "available_count": 5
+      }
+    },
+    {
+      "query_id": "Q+015",
+      "family": "core_fields_all_entries",
+      "lookup": "БІЛИЙ",
+      "lookup_mode": "lemma_search",
+      "fields": [
+        "lemma",
+        "pos",
+        "definition"
+      ],
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-008",
+        "claim_count": 3
+      }
+    },
+    {
+      "query_id": "Q+016",
+      "family": "available_examples",
+      "lookup": "sum20-hist-ap-008",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 2,
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-008",
+        "claim_count": 2,
+        "available_count": 33
+      }
+    },
+    {
+      "query_id": "Q+017",
+      "family": "core_fields_all_entries",
+      "lookup": "БОМБАРДИР",
+      "lookup_mode": "lemma_search",
+      "fields": [
+        "lemma",
+        "pos",
+        "definition"
+      ],
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-009",
+        "claim_count": 3
+      }
+    },
+    {
+      "query_id": "Q+018",
+      "family": "available_examples",
+      "lookup": "sum20-hist-ap-009",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 2,
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-009",
+        "claim_count": 2,
+        "available_count": 4
+      }
+    },
+    {
+      "query_id": "Q+019",
+      "family": "core_fields_all_entries",
+      "lookup": "БРИГАДА",
+      "lookup_mode": "lemma_search",
+      "fields": [
+        "lemma",
+        "pos",
+        "definition"
+      ],
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-010",
+        "claim_count": 3
+      }
+    },
+    {
+      "query_id": "Q+020",
+      "family": "available_examples",
+      "lookup": "sum20-hist-ap-010",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 2,
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-010",
+        "claim_count": 2,
+        "available_count": 10
+      }
+    },
+    {
+      "query_id": "Q+021",
+      "family": "core_fields_all_entries",
+      "lookup": "ГРАМОТА",
+      "lookup_mode": "lemma_search",
+      "fields": [
+        "lemma",
+        "pos",
+        "definition"
+      ],
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-011",
+        "claim_count": 3
+      }
+    },
+    {
+      "query_id": "Q+022",
+      "family": "available_examples",
+      "lookup": "sum20-hist-ap-011",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 2,
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-011",
+        "claim_count": 2,
+        "available_count": 30
+      }
+    },
+    {
+      "query_id": "Q+023",
+      "family": "core_fields_all_entries",
+      "lookup": "ЕТАП",
+      "lookup_mode": "lemma_search",
+      "fields": [
+        "lemma",
+        "pos",
+        "definition"
+      ],
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-012",
+        "claim_count": 3
+      }
+    },
+    {
+      "query_id": "Q+024",
+      "family": "available_examples",
+      "lookup": "sum20-hist-ap-012",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 2,
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-012",
+        "claim_count": 2,
+        "available_count": 22
+      }
+    },
+    {
+      "query_id": "Q+025",
+      "family": "core_fields_all_entries",
+      "lookup": "ЖАЛУВАТИ",
+      "lookup_mode": "lemma_search",
+      "fields": [
+        "lemma",
+        "pos",
+        "definition"
+      ],
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-013",
+        "claim_count": 3
+      }
+    },
+    {
+      "query_id": "Q+026",
+      "family": "available_examples",
+      "lookup": "sum20-hist-ap-013",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 2,
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-013",
+        "claim_count": 2,
+        "available_count": 18
+      }
+    },
+    {
+      "query_id": "Q+027",
+      "family": "core_fields_all_entries",
+      "lookup": "ЗИМОВИК",
+      "lookup_mode": "lemma_search",
+      "fields": [
+        "lemma",
+        "pos",
+        "definition"
+      ],
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-014",
+        "claim_count": 3
+      }
+    },
+    {
+      "query_id": "Q+028",
+      "family": "available_examples",
+      "lookup": "sum20-hist-ap-014",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 2,
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-014",
+        "claim_count": 2,
+        "available_count": 2
+      }
+    },
+    {
+      "query_id": "Q+029",
+      "family": "core_fields_all_entries",
+      "lookup": "КЛАС",
+      "lookup_mode": "lemma_search",
+      "fields": [
+        "lemma",
+        "pos",
+        "definition"
+      ],
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-015",
+        "claim_count": 3
+      }
+    },
+    {
+      "query_id": "Q+030",
+      "family": "available_examples",
+      "lookup": "sum20-hist-ap-015",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 2,
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-015",
+        "claim_count": 2,
+        "available_count": 42
+      }
+    },
+    {
+      "query_id": "Q+031",
+      "family": "core_fields_all_entries",
+      "lookup": "КНИГА",
+      "lookup_mode": "lemma_search",
+      "fields": [
+        "lemma",
+        "pos",
+        "definition"
+      ],
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-016",
+        "claim_count": 3
+      }
+    },
+    {
+      "query_id": "Q+032",
+      "family": "available_examples",
+      "lookup": "sum20-hist-ap-016",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 2,
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-016",
+        "claim_count": 2,
+        "available_count": 40
+      }
+    },
+    {
+      "query_id": "Q+033",
+      "family": "core_fields_all_entries",
+      "lookup": "ЛІБРА",
+      "lookup_mode": "lemma_search",
+      "fields": [
+        "lemma",
+        "pos",
+        "definition"
+      ],
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-017",
+        "claim_count": 3
+      }
+    },
+    {
+      "query_id": "Q+034",
+      "family": "available_examples",
+      "lookup": "sum20-hist-ap-017",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 2,
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-017",
+        "claim_count": 2,
+        "available_count": 2
+      }
+    },
+    {
+      "query_id": "Q+035",
+      "family": "core_fields_all_entries",
+      "lookup": "ОТАМАН",
+      "lookup_mode": "lemma_search",
+      "fields": [
+        "lemma",
+        "pos",
+        "definition"
+      ],
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-018",
+        "claim_count": 3
+      }
+    },
+    {
+      "query_id": "Q+036",
+      "family": "available_examples",
+      "lookup": "sum20-hist-ap-018",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 2,
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-018",
+        "claim_count": 2,
+        "available_count": 22
+      }
+    },
+    {
+      "query_id": "Q+037",
+      "family": "core_fields_all_entries",
+      "lookup": "ПРАВО",
+      "lookup_mode": "lemma_search",
+      "fields": [
+        "lemma",
+        "pos",
+        "definition"
+      ],
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-019",
+        "claim_count": 3
+      }
+    },
+    {
+      "query_id": "Q+038",
+      "family": "available_examples",
+      "lookup": "sum20-hist-ap-019",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 2,
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-019",
+        "claim_count": 2,
+        "available_count": 77
+      }
+    },
+    {
+      "query_id": "Q+039",
+      "family": "core_fields_all_entries",
+      "lookup": "ПРОМИСЕЛ",
+      "lookup_mode": "lemma_search",
+      "fields": [
+        "lemma",
+        "pos",
+        "definition"
+      ],
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-020",
+        "claim_count": 3
+      }
+    },
+    {
+      "query_id": "Q+040",
+      "family": "available_examples",
+      "lookup": "sum20-hist-ap-020",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 2,
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-020",
+        "claim_count": 2,
+        "available_count": 21
+      }
+    },
+    {
+      "query_id": "Q+041",
+      "family": "core_fields_all_entries",
+      "lookup": "ПРОПИСКА",
+      "lookup_mode": "lemma_search",
+      "fields": [
+        "lemma",
+        "pos",
+        "definition"
+      ],
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-021",
+        "claim_count": 3
+      }
+    },
+    {
+      "query_id": "Q+042",
+      "family": "available_examples",
+      "lookup": "sum20-hist-ap-021",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 2,
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-021",
+        "claim_count": 2,
+        "available_count": 7
+      }
+    },
+    {
+      "query_id": "Q+043",
+      "family": "core_fields_all_entries",
+      "lookup": "ПУДРА",
+      "lookup_mode": "lemma_search",
+      "fields": [
+        "lemma",
+        "pos",
+        "definition"
+      ],
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-022",
+        "claim_count": 3
+      }
+    },
+    {
+      "query_id": "Q+044",
+      "family": "available_examples",
+      "lookup": "sum20-hist-ap-022",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 2,
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-022",
+        "claim_count": 2,
+        "available_count": 13
+      }
+    },
+    {
+      "query_id": "Q+045",
+      "family": "core_fields_all_entries",
+      "lookup": "ПУШКАР",
+      "lookup_mode": "lemma_search",
+      "fields": [
+        "lemma",
+        "pos",
+        "definition"
+      ],
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-023",
+        "claim_count": 3
+      }
+    },
+    {
+      "query_id": "Q+046",
+      "family": "available_examples",
+      "lookup": "sum20-hist-ap-023",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 2,
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-023",
+        "claim_count": 2,
+        "available_count": 9
+      }
+    },
+    {
+      "query_id": "Q+047",
+      "family": "core_fields_all_entries",
+      "lookup": "П'ЯТИНА",
+      "lookup_mode": "lemma_search",
+      "fields": [
+        "lemma",
+        "pos",
+        "definition"
+      ],
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-024",
+        "claim_count": 3
+      }
+    },
+    {
+      "query_id": "Q+048",
+      "family": "available_examples",
+      "lookup": "sum20-hist-ap-024",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 2,
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-024",
+        "claim_count": 2,
+        "available_count": 3
+      }
+    },
+    {
+      "query_id": "Q+049",
+      "family": "core_fields_all_entries",
+      "lookup": "П'ЯТИРІЧКА",
+      "lookup_mode": "lemma_search",
+      "fields": [
+        "lemma",
+        "pos",
+        "definition"
+      ],
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-025",
+        "claim_count": 3
+      }
+    },
+    {
+      "query_id": "Q+050",
+      "family": "available_examples",
+      "lookup": "sum20-hist-ap-025",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 2,
+      "expected": {
+        "status": "ok",
+        "entry_id": "sum20-hist-ap-025",
+        "claim_count": 2,
+        "available_count": 7
+      }
+    }
+  ],
+  "Q_negative": [
+    {
+      "query_id": "Q-001",
+      "family": "example_overrequest",
+      "lookup": "sum20-hist-ap-001",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 2,
+      "expected": {
+        "status": "refused",
+        "reason": "EVIDENCE_UNAVAILABLE",
+        "entry_id": "sum20-hist-ap-001",
+        "requested_count": 2,
+        "available_count": 1
+      }
+    },
+    {
+      "query_id": "Q-002",
+      "family": "example_overrequest",
+      "lookup": "sum20-hist-ap-002",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 4,
+      "expected": {
+        "status": "refused",
+        "reason": "EVIDENCE_UNAVAILABLE",
+        "entry_id": "sum20-hist-ap-002",
+        "requested_count": 4,
+        "available_count": 3
+      }
+    },
+    {
+      "query_id": "Q-003",
+      "family": "example_overrequest",
+      "lookup": "sum20-hist-ap-004",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 4,
+      "expected": {
+        "status": "refused",
+        "reason": "EVIDENCE_UNAVAILABLE",
+        "entry_id": "sum20-hist-ap-004",
+        "requested_count": 4,
+        "available_count": 3
+      }
+    },
+    {
+      "query_id": "Q-004",
+      "family": "example_overrequest",
+      "lookup": "sum20-hist-ap-005",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 5,
+      "expected": {
+        "status": "refused",
+        "reason": "EVIDENCE_UNAVAILABLE",
+        "entry_id": "sum20-hist-ap-005",
+        "requested_count": 5,
+        "available_count": 4
+      }
+    },
+    {
+      "query_id": "Q-005",
+      "family": "example_overrequest",
+      "lookup": "sum20-hist-ap-006",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 5,
+      "expected": {
+        "status": "refused",
+        "reason": "EVIDENCE_UNAVAILABLE",
+        "entry_id": "sum20-hist-ap-006",
+        "requested_count": 5,
+        "available_count": 4
+      }
+    },
+    {
+      "query_id": "Q-006",
+      "family": "example_overrequest",
+      "lookup": "sum20-hist-ap-007",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 6,
+      "expected": {
+        "status": "refused",
+        "reason": "EVIDENCE_UNAVAILABLE",
+        "entry_id": "sum20-hist-ap-007",
+        "requested_count": 6,
+        "available_count": 5
+      }
+    },
+    {
+      "query_id": "Q-007",
+      "family": "example_overrequest",
+      "lookup": "sum20-hist-ap-009",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 5,
+      "expected": {
+        "status": "refused",
+        "reason": "EVIDENCE_UNAVAILABLE",
+        "entry_id": "sum20-hist-ap-009",
+        "requested_count": 5,
+        "available_count": 4
+      }
+    },
+    {
+      "query_id": "Q-008",
+      "family": "example_overrequest",
+      "lookup": "sum20-hist-ap-014",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 3,
+      "expected": {
+        "status": "refused",
+        "reason": "EVIDENCE_UNAVAILABLE",
+        "entry_id": "sum20-hist-ap-014",
+        "requested_count": 3,
+        "available_count": 2
+      }
+    },
+    {
+      "query_id": "Q-009",
+      "family": "example_overrequest",
+      "lookup": "sum20-hist-ap-017",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 3,
+      "expected": {
+        "status": "refused",
+        "reason": "EVIDENCE_UNAVAILABLE",
+        "entry_id": "sum20-hist-ap-017",
+        "requested_count": 3,
+        "available_count": 2
+      }
+    },
+    {
+      "query_id": "Q-010",
+      "family": "example_overrequest",
+      "lookup": "sum20-hist-ap-021",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 8,
+      "expected": {
+        "status": "refused",
+        "reason": "EVIDENCE_UNAVAILABLE",
+        "entry_id": "sum20-hist-ap-021",
+        "requested_count": 8,
+        "available_count": 7
+      }
+    },
+    {
+      "query_id": "Q-011",
+      "family": "example_overrequest",
+      "lookup": "sum20-hist-ap-023",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 10,
+      "expected": {
+        "status": "refused",
+        "reason": "EVIDENCE_UNAVAILABLE",
+        "entry_id": "sum20-hist-ap-023",
+        "requested_count": 10,
+        "available_count": 9
+      }
+    },
+    {
+      "query_id": "Q-012",
+      "family": "example_overrequest",
+      "lookup": "sum20-hist-ap-024",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 4,
+      "expected": {
+        "status": "refused",
+        "reason": "EVIDENCE_UNAVAILABLE",
+        "entry_id": "sum20-hist-ap-024",
+        "requested_count": 4,
+        "available_count": 3
+      }
+    },
+    {
+      "query_id": "Q-013",
+      "family": "example_overrequest",
+      "lookup": "sum20-hist-ap-025",
+      "lookup_mode": "entry_id",
+      "fields": [
+        "examples"
+      ],
+      "example_count": 8,
+      "expected": {
+        "status": "refused",
+        "reason": "EVIDENCE_UNAVAILABLE",
+        "entry_id": "sum20-hist-ap-025",
+        "requested_count": 8,
+        "available_count": 7
+      }
+    }
+  ]
+}

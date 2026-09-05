@@ -1,0 +1,18 @@
+{
+  "release_id": "sum20-hist-ap-pilot-r001",
+  "dataset_id": "sum20-hist-ap-pilot-v0",
+  "release_sequence": 1,
+  "state": "released",
+  "entry_count": 25,
+  "entry_schema_version": "lex-entry-v0.4",
+  "content_hash_manifest": "data/pilot/pre-release/content-hashes.json",
+  "release_manifest": "data/pilot/release/release.json",
+  "release_commitment": "data/pilot/release/release-commitment.json",
+  "merkle_profile": "merkle-profile-v0.1",
+  "evidence_schema_version": "evidence-record-v0.1",
+  "id_policy": {
+    "format": "<dataset-stem>-rNNN",
+    "reuse": "forbidden",
+    "next_if_canonical_content_changes": "sum20-hist-ap-pilot-r002"
+  }
+}

@@ -1,0 +1,371 @@
+{
+  "experiment_id": "p3-release-tamper-run-v0.1",
+  "release_id": "sum20-hist-ap-pilot-r001",
+  "release_schema_version": "release-v0.1",
+  "merkle_profile_id": "merkle-profile-v0.1",
+  "base_merkle_root": "03f36166f45c268d7c8ce4468de6c64dbc884705dd21ab581ee38377da7d3ae2",
+  "base_release_json_sha256": "3a8285f98363363345f52f5e4438b04ad06e0f3397add75a25c08efcf2fbef94",
+  "case_manifest_id": "p3-release-tamper-cases-v0.1",
+  "case_manifest_file": "eval/release-tamper-cases-v0.1.json",
+  "case_manifest_jcs_sha256": "99d26735e658e2f6604c544fe4d59b0b4abbabc200f9ef7103e8bb6b428a3298",
+  "frozen_artifacts_mutated": false,
+  "verifier": {
+    "injected": 30,
+    "detected": 30,
+    "TDR": 1.0,
+    "by_class": {
+      "canonical_content_mutation": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "release_entry_digest_mutation": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "release_entry_digest_remap": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "release_entry_id_mutation": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "release_entry_removal": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "release_entry_addition": {
+        "injected": 1,
+        "detected": 1,
+        "rate": 1.0
+      },
+      "release_entry_reorder": {
+        "injected": 1,
+        "detected": 1,
+        "rate": 1.0
+      },
+      "merkle_root_mutation": {
+        "injected": 1,
+        "detected": 1,
+        "rate": 1.0
+      },
+      "release_id_mutation": {
+        "injected": 1,
+        "detected": 1,
+        "rate": 1.0
+      },
+      "release_commitment_hash_mutation": {
+        "injected": 1,
+        "detected": 1,
+        "rate": 1.0
+      }
+    },
+    "undetected": []
+  },
+  "cases": [
+    {
+      "case_id": "RT-001",
+      "corruption_class": "canonical_content_mutation",
+      "detected": true,
+      "violations": [
+        "canonical content hash mismatch for sum20-hist-ap-001"
+      ]
+    },
+    {
+      "case_id": "RT-002",
+      "corruption_class": "canonical_content_mutation",
+      "detected": true,
+      "violations": [
+        "canonical content hash mismatch for sum20-hist-ap-008"
+      ]
+    },
+    {
+      "case_id": "RT-003",
+      "corruption_class": "canonical_content_mutation",
+      "detected": true,
+      "violations": [
+        "canonical content hash mismatch for sum20-hist-ap-015"
+      ]
+    },
+    {
+      "case_id": "RT-004",
+      "corruption_class": "canonical_content_mutation",
+      "detected": true,
+      "violations": [
+        "canonical content hash mismatch for sum20-hist-ap-019"
+      ]
+    },
+    {
+      "case_id": "RT-005",
+      "corruption_class": "canonical_content_mutation",
+      "detected": true,
+      "violations": [
+        "canonical content hash mismatch for sum20-hist-ap-025"
+      ]
+    },
+    {
+      "case_id": "RT-006",
+      "corruption_class": "release_entry_digest_mutation",
+      "detected": true,
+      "violations": [
+        "release entry_id/content_sha256 mapping differs from frozen content manifest",
+        "release merkle_root does not reproduce from manifest entries",
+        "release_json_sha256 does not match RFC8785-JCS release manifest"
+      ]
+    },
+    {
+      "case_id": "RT-007",
+      "corruption_class": "release_entry_digest_mutation",
+      "detected": true,
+      "violations": [
+        "release entry_id/content_sha256 mapping differs from frozen content manifest",
+        "release merkle_root does not reproduce from manifest entries",
+        "release_json_sha256 does not match RFC8785-JCS release manifest"
+      ]
+    },
+    {
+      "case_id": "RT-008",
+      "corruption_class": "release_entry_digest_mutation",
+      "detected": true,
+      "violations": [
+        "release entry_id/content_sha256 mapping differs from frozen content manifest",
+        "release merkle_root does not reproduce from manifest entries",
+        "release_json_sha256 does not match RFC8785-JCS release manifest"
+      ]
+    },
+    {
+      "case_id": "RT-009",
+      "corruption_class": "release_entry_digest_mutation",
+      "detected": true,
+      "violations": [
+        "release entry_id/content_sha256 mapping differs from frozen content manifest",
+        "release merkle_root does not reproduce from manifest entries",
+        "release_json_sha256 does not match RFC8785-JCS release manifest"
+      ]
+    },
+    {
+      "case_id": "RT-010",
+      "corruption_class": "release_entry_digest_mutation",
+      "detected": true,
+      "violations": [
+        "release entry_id/content_sha256 mapping differs from frozen content manifest",
+        "release merkle_root does not reproduce from manifest entries",
+        "release_json_sha256 does not match RFC8785-JCS release manifest"
+      ]
+    },
+    {
+      "case_id": "RT-011",
+      "corruption_class": "release_entry_digest_remap",
+      "detected": true,
+      "violations": [
+        "release entry_id/content_sha256 mapping differs from frozen content manifest",
+        "release merkle_root does not reproduce from manifest entries",
+        "release_json_sha256 does not match RFC8785-JCS release manifest"
+      ]
+    },
+    {
+      "case_id": "RT-012",
+      "corruption_class": "release_entry_digest_remap",
+      "detected": true,
+      "violations": [
+        "release entry_id/content_sha256 mapping differs from frozen content manifest",
+        "release merkle_root does not reproduce from manifest entries",
+        "release_json_sha256 does not match RFC8785-JCS release manifest"
+      ]
+    },
+    {
+      "case_id": "RT-013",
+      "corruption_class": "release_entry_digest_remap",
+      "detected": true,
+      "violations": [
+        "release entry_id/content_sha256 mapping differs from frozen content manifest",
+        "release merkle_root does not reproduce from manifest entries",
+        "release_json_sha256 does not match RFC8785-JCS release manifest"
+      ]
+    },
+    {
+      "case_id": "RT-014",
+      "corruption_class": "release_entry_digest_remap",
+      "detected": true,
+      "violations": [
+        "release entry_id/content_sha256 mapping differs from frozen content manifest",
+        "release merkle_root does not reproduce from manifest entries",
+        "release_json_sha256 does not match RFC8785-JCS release manifest"
+      ]
+    },
+    {
+      "case_id": "RT-015",
+      "corruption_class": "release_entry_digest_remap",
+      "detected": true,
+      "violations": [
+        "release entry_id/content_sha256 mapping differs from frozen content manifest",
+        "release merkle_root does not reproduce from manifest entries",
+        "release_json_sha256 does not match RFC8785-JCS release manifest"
+      ]
+    },
+    {
+      "case_id": "RT-016",
+      "corruption_class": "release_entry_id_mutation",
+      "detected": true,
+      "violations": [
+        "release entries are not in canonical entry_id order",
+        "release entry_id/content_sha256 mapping differs from frozen content manifest",
+        "release merkle_root does not reproduce from manifest entries",
+        "release_json_sha256 does not match RFC8785-JCS release manifest"
+      ]
+    },
+    {
+      "case_id": "RT-017",
+      "corruption_class": "release_entry_id_mutation",
+      "detected": true,
+      "violations": [
+        "release entries are not in canonical entry_id order",
+        "release entry_id/content_sha256 mapping differs from frozen content manifest",
+        "release merkle_root does not reproduce from manifest entries",
+        "release_json_sha256 does not match RFC8785-JCS release manifest"
+      ]
+    },
+    {
+      "case_id": "RT-018",
+      "corruption_class": "release_entry_id_mutation",
+      "detected": true,
+      "violations": [
+        "release entries are not in canonical entry_id order",
+        "release entry_id/content_sha256 mapping differs from frozen content manifest",
+        "release merkle_root does not reproduce from manifest entries",
+        "release_json_sha256 does not match RFC8785-JCS release manifest"
+      ]
+    },
+    {
+      "case_id": "RT-019",
+      "corruption_class": "release_entry_id_mutation",
+      "detected": true,
+      "violations": [
+        "release entries are not in canonical entry_id order",
+        "release entry_id/content_sha256 mapping differs from frozen content manifest",
+        "release merkle_root does not reproduce from manifest entries",
+        "release_json_sha256 does not match RFC8785-JCS release manifest"
+      ]
+    },
+    {
+      "case_id": "RT-020",
+      "corruption_class": "release_entry_id_mutation",
+      "detected": true,
+      "violations": [
+        "release entry_id/content_sha256 mapping differs from frozen content manifest",
+        "release merkle_root does not reproduce from manifest entries",
+        "release_json_sha256 does not match RFC8785-JCS release manifest"
+      ]
+    },
+    {
+      "case_id": "RT-021",
+      "corruption_class": "release_entry_removal",
+      "detected": true,
+      "violations": [
+        "release entry_count does not match frozen content manifest",
+        "release entry_id/content_sha256 mapping differs from frozen content manifest",
+        "release merkle_root does not reproduce from manifest entries",
+        "release_json_sha256 does not match RFC8785-JCS release manifest"
+      ]
+    },
+    {
+      "case_id": "RT-022",
+      "corruption_class": "release_entry_removal",
+      "detected": true,
+      "violations": [
+        "release entry_count does not match frozen content manifest",
+        "release entry_id/content_sha256 mapping differs from frozen content manifest",
+        "release merkle_root does not reproduce from manifest entries",
+        "release_json_sha256 does not match RFC8785-JCS release manifest"
+      ]
+    },
+    {
+      "case_id": "RT-023",
+      "corruption_class": "release_entry_removal",
+      "detected": true,
+      "violations": [
+        "release entry_count does not match frozen content manifest",
+        "release entry_id/content_sha256 mapping differs from frozen content manifest",
+        "release merkle_root does not reproduce from manifest entries",
+        "release_json_sha256 does not match RFC8785-JCS release manifest"
+      ]
+    },
+    {
+      "case_id": "RT-024",
+      "corruption_class": "release_entry_removal",
+      "detected": true,
+      "violations": [
+        "release entry_count does not match frozen content manifest",
+        "release entry_id/content_sha256 mapping differs from frozen content manifest",
+        "release merkle_root does not reproduce from manifest entries",
+        "release_json_sha256 does not match RFC8785-JCS release manifest"
+      ]
+    },
+    {
+      "case_id": "RT-025",
+      "corruption_class": "release_entry_removal",
+      "detected": true,
+      "violations": [
+        "release entry_count does not match frozen content manifest",
+        "release entry_id/content_sha256 mapping differs from frozen content manifest",
+        "release merkle_root does not reproduce from manifest entries",
+        "release_json_sha256 does not match RFC8785-JCS release manifest"
+      ]
+    },
+    {
+      "case_id": "RT-026",
+      "corruption_class": "release_entry_addition",
+      "detected": true,
+      "violations": [
+        "release entry_count does not match frozen content manifest",
+        "release entry_id/content_sha256 mapping differs from frozen content manifest",
+        "release merkle_root does not reproduce from manifest entries",
+        "release_json_sha256 does not match RFC8785-JCS release manifest"
+      ]
+    },
+    {
+      "case_id": "RT-027",
+      "corruption_class": "release_entry_reorder",
+      "detected": true,
+      "violations": [
+        "release entries are not in canonical entry_id order",
+        "release entry_id/content_sha256 mapping differs from frozen content manifest",
+        "release merkle_root does not reproduce from manifest entries",
+        "release_json_sha256 does not match RFC8785-JCS release manifest"
+      ]
+    },
+    {
+      "case_id": "RT-028",
+      "corruption_class": "merkle_root_mutation",
+      "detected": true,
+      "violations": [
+        "release merkle_root does not reproduce from manifest entries",
+        "commitment merkle_root does not match release manifest",
+        "release_json_sha256 does not match RFC8785-JCS release manifest"
+      ]
+    },
+    {
+      "case_id": "RT-029",
+      "corruption_class": "release_id_mutation",
+      "detected": true,
+      "violations": [
+        "release_id does not match frozen release reservation",
+        "commitment release_id does not match release manifest",
+        "release_json_sha256 does not match RFC8785-JCS release manifest"
+      ]
+    },
+    {
+      "case_id": "RT-030",
+      "corruption_class": "release_commitment_hash_mutation",
+      "detected": true,
+      "violations": [
+        "release_json_sha256 does not match RFC8785-JCS release manifest"
+      ]
+    }
+  ]
+}

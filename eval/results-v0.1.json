@@ -1,0 +1,32 @@
+{
+  "evaluation_id": "p1-eval-run-v0.1",
+  "query_set_id": "p1-eval-qset-v0.1",
+  "release_id": "sum20-hist-ap-pilot-r001",
+  "dataset_id": "sum20-hist-ap-pilot-v0",
+  "counts": {
+    "Q_positive": 50,
+    "Q_positive_ok": 50,
+    "Q_positive_false_refusals": 0,
+    "Q_positive_other_failures": 0,
+    "Q_negative": 13,
+    "Q_negative_correct_refusals": 13,
+    "Q_negative_false_accepts": 0,
+    "Q_negative_wrong_failures": 0,
+    "returned_claims": 124,
+    "claims_with_evidence": 124,
+    "resolved_evidence": 124
+  },
+  "metrics": {
+    "EC": 1.0,
+    "ERS": 1.0,
+    "RR": 1.0,
+    "FRR": 0.0
+  },
+  "metric_definitions": {
+    "EC": "returned claims carrying an evidence_id / all returned claims",
+    "ERS": "returned evidence IDs that resolve and reproduce the claim value / all returned evidence IDs",
+    "RR": "Q- queries correctly refused with EVIDENCE_UNAVAILABLE / all Q- queries",
+    "FRR": "Q+ queries incorrectly refused with EVIDENCE_UNAVAILABLE / all Q+ queries"
+  },
+  "failures": []
+}

@@ -10,6 +10,18 @@
     {"kind": "recursive_example_text", "key": "text", "field_class": "example_text"},
     {"kind": "top_level_phrase_display", "root": "/phrases", "key": "display", "field_class": "phrase_display"}
   ],
-  "exclude_from_v0_1": ["labels_source","source_ref","morphology_source","cross_references","lemma variants","internal identifiers","source/provenance metadata"],
-  "selection_constraints": {"scalar_targets_only": true,"null_definitions_are_skipped": true,"record_order": "entry_id ascending, then json_pointer lexicographic"}
+  "exclude_from_v0_1": [
+    "labels_source",
+    "source_ref",
+    "morphology_source",
+    "cross_references",
+    "lemma variants",
+    "internal identifiers",
+    "source/provenance metadata"
+  ],
+  "selection_constraints": {
+    "scalar_targets_only": true,
+    "null_definitions_are_skipped": true,
+    "record_order": "entry_id ascending, then json_pointer lexicographic"
+  }
 }

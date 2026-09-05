@@ -1,0 +1,89 @@
+{
+  "profile_id": "p3-release-tamper-profile-v0.1",
+  "release_id": "sum20-hist-ap-pilot-r001",
+  "release_schema_version": "release-v0.1",
+  "merkle_profile_id": "merkle-profile-v0.1",
+  "purpose": "Deterministic release-level tamper-detection profile for the P3 pilot.",
+  "frozen_artifacts_mutated": false,
+  "entry_samples": [
+    "sum20-hist-ap-001",
+    "sum20-hist-ap-008",
+    "sum20-hist-ap-015",
+    "sum20-hist-ap-019",
+    "sum20-hist-ap-025"
+  ],
+  "corruption_classes": [
+    {
+      "id": "canonical_content_mutation",
+      "scope": "canonical_override",
+      "per_entry_sample": true,
+      "target_pointer": "/def_short",
+      "operation": "append_literal",
+      "literal": " [TAMPERED]"
+    },
+    {
+      "id": "release_entry_digest_mutation",
+      "scope": "release.entries",
+      "per_entry_sample": true,
+      "operation": "flip_last_hex"
+    },
+    {
+      "id": "release_entry_digest_remap",
+      "scope": "release.entries",
+      "per_entry_sample": true,
+      "operation": "replace_with_next_entry_digest"
+    },
+    {
+      "id": "release_entry_id_mutation",
+      "scope": "release.entries",
+      "per_entry_sample": true,
+      "operation": "replace_with_valid_synthetic_entry_id",
+      "synthetic_id_start": 901
+    },
+    {
+      "id": "release_entry_removal",
+      "scope": "release.entries",
+      "per_entry_sample": true,
+      "operation": "remove_entry_and_decrement_count"
+    },
+    {
+      "id": "release_entry_addition",
+      "scope": "release.entries",
+      "per_entry_sample": false,
+      "operation": "append_valid_synthetic_entry_and_increment_count",
+      "synthetic_entry_id": "sum20-hist-ap-900",
+      "digest_source_entry_id": "sum20-hist-ap-001"
+    },
+    {
+      "id": "release_entry_reorder",
+      "scope": "release.entries",
+      "per_entry_sample": false,
+      "operation": "swap_first_two_entries"
+    },
+    {
+      "id": "merkle_root_mutation",
+      "scope": "release.merkle_root",
+      "per_entry_sample": false,
+      "operation": "flip_last_hex"
+    },
+    {
+      "id": "release_id_mutation",
+      "scope": "release.release_id",
+      "per_entry_sample": false,
+      "operation": "replace_literal",
+      "value": "sum20-hist-ap-pilot-r002"
+    },
+    {
+      "id": "release_commitment_hash_mutation",
+      "scope": "commitment.release_json_sha256",
+      "per_entry_sample": false,
+      "operation": "flip_last_hex"
+    }
+  ],
+  "case_construction": {
+    "order": "corruption_classes in listed order; per-entry classes expand over entry_samples in listed order",
+    "case_id_format": "RT-{1-based index:03d}",
+    "expected_case_count": 30,
+    "randomness": "none"
+  }
+}

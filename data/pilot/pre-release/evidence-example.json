@@ -1,0 +1,12 @@
+{
+  "schema_version": "evidence-record-v0.1",
+  "id_profile": "ev1-jcs-sha256",
+  "evidence_id": "ev1-ce7fab2a588d80b8621f4ac77215d84dcd0166f19485f57c72699acb55197e0b",
+  "release_id": "sum20-hist-ap-pilot-r001",
+  "entry_id": "sum20-hist-ap-001",
+  "content_sha256": "5ba082967e2af654d972507486a3f9e5511dce2558d51f4c676eb5434b8537a5",
+  "json_pointer": "/senses/0/definition",
+  "target_type": "string",
+  "target_hash_profile": "jcs-sha256",
+  "target_sha256": "b1856a735371b0fb9a77d7b77b344bf1c3feba10526eb299703cb2deb1e3c83f"
+}

@@ -1,0 +1,10 @@
+{
+  "commitment_version": "release-commitment-v0.1",
+  "release_id": "sum20-hist-ap-pilot-r001",
+  "release_json": "data/pilot/release/release.json",
+  "canonicalization": "RFC8785-JCS",
+  "hash_algorithm": "SHA-256",
+  "release_json_sha256": "3a8285f98363363345f52f5e4438b04ad06e0f3397add75a25c08efcf2fbef94",
+  "merkle_root": "03f36166f45c268d7c8ce4468de6c64dbc884705dd21ab581ee38377da7d3ae2",
+  "signature_status": "not_implemented"
+}

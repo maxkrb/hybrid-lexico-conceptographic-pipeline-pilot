@@ -1,0 +1,53 @@
+{
+  "schema_version": "lex-entry-v0.4",
+  "dataset_id": "sum20-hist-ap-pilot-v0",
+  "entry_id": "sum20-hist-ap-013",
+  "source": {"raw_path": "data/pilot/raw/013-zhaluvaty.txt", "raw_sha256": "a3deadbe4332bb59b60e074088357e8c273e185fcada2ee36b1c32f1736794a2", "source_file": "4e21e575-8d98-4c3b-82a1-8f023a00d1ca.docx"},
+  "lemma": {"display": "ЖА́ЛУВАТИ", "search": "ЖАЛУВАТИ", "variants": []},
+  "grammar": {"pos": "VERB", "pos_status": "inferred_from_headword_morphology", "aspect": "imperfective", "aspect_source": "недок.", "inflection_source": "ую, уєш"},
+  "def_short": "Виявляти прихильність, ласку, любов.",
+  "def_short_source_pointer": "/senses/0/definition",
+  "senses": [
+    {"sense_id": "sum20-hist-ap-013-s1", "labels_source": ["розм."], "morphology_source": {"government": "кого і без прям. дод."}, "definition": "Виявляти прихильність, ласку, любов.", "examples": [
+      {"example_id": "sum20-hist-ap-013-s1-e1", "text": "Хоч був тато грізний, а проте дуже нас жалував", "source_ref": "Марко Вовчок"},
+      {"example_id": "sum20-hist-ap-013-s1-e2", "text": "Мати жалувала його щиро, бо любила його понад усі діти", "source_ref": "Л. Мартович"},
+      {"example_id": "sum20-hist-ap-013-s1-e3", "text": "Дуже досадно було бабі з дочкою дивитись на неї [дідову дочку], що дід її жалує", "source_ref": "О. Іваненко"}
+    ], "cross_references": []},
+    {"sense_id": "sum20-hist-ap-013-s2", "labels_source": ["розм."], "morphology_source": {"government": "кого, що"}, "definition": "Берегти, оберігати кого-, що-небудь; жаліти (у 3 знач.).", "examples": [
+      {"example_id": "sum20-hist-ap-013-s2-e1", "text": "– Поганяй! не жалуй коней! Треба мені зарані приїхати на вокзал! – гукав о. Артемій на парубка", "source_ref": "І. Нечуй-Левицький"},
+      {"example_id": "sum20-hist-ap-013-s2-e2", "text": "Знущайся, доле, не жалуй сили! .. До каплі кров мою іспий!", "source_ref": "С. Руданський", "labels_source": ["* Образно."]}
+    ], "sub_senses": [
+      {"sub_sense_id": "sum20-hist-ap-013-s2a", "labels_source": [], "definition": "Неохоче витрачати що-небудь; шкодувати.", "examples": [
+        {"example_id": "sum20-hist-ap-013-s2a-e1", "text": "Порішили вони чи так, чи інак, не жалуючи нічого, зловити отамана", "source_ref": "Марко Вовчок"},
+        {"example_id": "sum20-hist-ap-013-s2a-e2", "text": "Він зовсім не жалував тих грошей, що складав з зими ще собі на свиту", "source_ref": "М. Коцюбинський"},
+        {"example_id": "sum20-hist-ap-013-s2a-e3", "text": "Цар був скупий, вимагав від людей тяжкої служби, а на утримання війська жалував грошей", "source_ref": "Б. Лепкий"}
+      ], "cross_references": []}
+    ], "cross_references": [{"relation": "see_sense", "target_display": "жаліти 3"}]},
+    {"sense_id": "sum20-hist-ap-013-s3", "labels_source": ["заст."], "definition": "Уболівати за чимсь, за щось; жалкувати.", "examples": [
+      {"example_id": "sum20-hist-ap-013-s3-e1", "text": "Жалую, що не можу зараз послати Вам свого поличчя, бо ще не встиг сфотографуватися", "source_ref": "М. Коцюбинський"},
+      {"example_id": "sum20-hist-ap-013-s3-e2", "text": "Я багато часу потратила на руїни Помпеї [Помпеїв], але не жалую, бо то, здається мені, річ єдина в світі і надзвичайно цікава", "source_ref": "Леся Українка"}
+    ], "sub_senses": [
+      {"sub_sense_id": "sum20-hist-ap-013-s3a", "labels_source": [], "morphology_source": {"government": "кого"}, "definition": "Висловлювати співчуття кому-небудь, співчувати комусь.", "examples": [
+        {"example_id": "sum20-hist-ap-013-s3a-e1", "text": "Которих дівчат то матері й не пустили в дружки, .. а які і йдуть, то все зітхаючи та жалуючи Олесі", "source_ref": "Марко Вовчок"},
+        {"example_id": "sum20-hist-ap-013-s3a-e2", "text": "Він розумів, що ті люди не знають, що говорять, і жалував їх", "source_ref": "І. Франко"}
+      ], "cross_references": []}
+    ], "cross_references": []},
+    {"sense_id": "sum20-hist-ap-013-s4", "labels_source": ["іст."], "morphology_source": {"government": "кого, що, чим і без дод."}, "definition": "Дарувати що-небудь, нагороджувати чимсь.", "examples": [
+      {"example_id": "sum20-hist-ap-013-s4-e1", "text": "– Твого батька сама цариця вітала, приймала, Пісками жалувала!..", "source_ref": "Панас Мирний"},
+      {"example_id": "sum20-hist-ap-013-s4-e2", "text": "Старшину нашу цар жалував землями й угіддями, разом із людьми, які там живуть...", "source_ref": "Р. Іванченко"}
+    ], "sub_senses": [
+      {"sub_sense_id": "sum20-hist-ap-013-s4a", "labels_source": ["заст."], "definition": "Давати що-небудь (за послуги, заслуги і т. ін.).", "examples": [
+        {"example_id": "sum20-hist-ap-013-s4a-e1", "text": "Перед святками предводитель жалував йому по десять рублів", "source_ref": "Панас Мирний"},
+        {"example_id": "sum20-hist-ap-013-s4a-e2", "text": "Сам пан його шанує, інколи навіть своїм вином і одежиною жалує", "source_ref": "М. Стельмах"}
+      ], "cross_references": []}
+    ], "cross_references": []},
+    {"sense_id": "sum20-hist-ap-013-s5", "labels_source": ["заст."], "definition": "Іти, заходити куди-небудь.", "examples": [
+      {"example_id": "sum20-hist-ap-013-s5-e1", "text": "– То Лука Федорович? – повертаючись, спитав Проценко .. – Що це вас так давно нігде не видно? Жалуйте ж сюди...", "source_ref": "Панас Мирний"},
+      {"example_id": "sum20-hist-ap-013-s5-e2", "text": "Матюха до гостей – запрохує їх роздягатися, у світлицю жалувати", "source_ref": "А. Головко"}
+    ], "cross_references": []}
+  ],
+  "phrases": [
+    {"phrase_id": "sum20-hist-ap-013-p1", "display": "Жалі́ти (рідше жа́лувати) [сам] на се́бе", "marker_source": "", "labels_source": [], "definition": null, "examples": [], "cross_references": [{"relation": "see", "target_display": "жалі́ти"}]},
+    {"phrase_id": "sum20-hist-ap-013-p2", "display": "Прошу́ люби́ти й шанува́ти (жа́лувати)", "marker_source": "◇", "labels_source": [], "definition": null, "examples": [], "cross_references": [{"relation": "see", "target_display": "проси́ти"}]}
+  ]
+}

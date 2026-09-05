@@ -1,0 +1,36 @@
+{
+  "schema_version": "lex-entry-v0.4",
+  "dataset_id": "sum20-hist-ap-pilot-v0",
+  "entry_id": "sum20-hist-ap-024",
+  "source": {
+    "raw_path": "data/pilot/raw/024-piatyna.txt",
+    "raw_sha256": "6bdee24affe2332d6a84836ef080e5264696e9f294a06cfe177d4a9518edccb3",
+    "source_file": "4e21e575-8d98-4c3b-82a1-8f023a00d1ca.docx"
+  },
+  "lemma": {"display": "П'ЯТИ́НА", "search": "П'ЯТИНА", "variants": []},
+  "grammar": {"pos": "NOUN", "pos_status": "inferred_from_headword_morphology", "gender": "feminine", "gender_source": "ж.", "genitive_source": "и"},
+  "def_short": "Один із п'яти адміністративних районів, на які була поділена Новгородська земля в кінці XV ст.",
+  "def_short_source_pointer": "/senses/0/definition",
+  "senses": [
+    {
+      "sense_id": "sum20-hist-ap-024-s1",
+      "labels_source": ["іст."],
+      "definition": "Один із п'яти адміністративних районів, на які була поділена Новгородська земля в кінці XV ст.",
+      "examples": [
+        {"example_id": "sum20-hist-ap-024-s1-e1", "text": "У Новгородi вже зiбралась сила-силенна людей з полунощних [північних] земель, на Волховi похитувались лодiї з усiх п'ятин новгородської землi", "source_ref": "С. Скляренко"},
+        {"example_id": "sum20-hist-ap-024-s1-e2", "text": "Після смерті Синєуса старий Рюрик, нарешті, став єдиним волостелем [володарем] усіх новгородських п'ятин", "source_ref": "Р. Іванченко"}
+      ],
+      "cross_references": []
+    },
+    {
+      "sense_id": "sum20-hist-ap-024-s2",
+      "labels_source": ["заст."],
+      "definition": "П'ята частина чого-небудь.",
+      "examples": [
+        {"example_id": "sum20-hist-ap-024-s2-e1", "text": "Нехай учинить фараон, і нехай призначить урядників над краєм, і нехай за сім літ достатку збирає п'ятину врожаю єгипетської землі", "source_ref": "Біблія. Пер. І. Огієнка"}
+      ],
+      "cross_references": []
+    }
+  ],
+  "phrases": []
+}

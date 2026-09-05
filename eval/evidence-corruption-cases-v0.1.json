@@ -1,0 +1,782 @@
+{
+  "case_manifest_id": "p1-evidence-corruption-cases-v0.1",
+  "profile_id": "p1-evidence-corruption-profile-v0.1",
+  "release_id": "sum20-hist-ap-pilot-r001",
+  "registry_version": "evidence-registry-v0.1",
+  "generator": "scripts/generate_evidence_corruption_cases.py",
+  "construction": {
+    "order": "corruption_classes in listed order × samples in listed order",
+    "case_id_format": "EC-{1-based index:03d}",
+    "expected_case_count": 45,
+    "randomness": "none"
+  },
+  "samples": [
+    {
+      "sample_class": "def_short",
+      "entry_id": "sum20-hist-ap-001",
+      "json_pointer": "/def_short",
+      "evidence_id": "ev1-76281c2fb3044f065a068ff78c386585e10987d82a5ee85ecbb0f17669281206",
+      "base_record": {
+        "schema_version": "evidence-record-v0.1",
+        "id_profile": "ev1-jcs-sha256",
+        "evidence_id": "ev1-76281c2fb3044f065a068ff78c386585e10987d82a5ee85ecbb0f17669281206",
+        "release_id": "sum20-hist-ap-pilot-r001",
+        "entry_id": "sum20-hist-ap-001",
+        "content_sha256": "5ba082967e2af654d972507486a3f9e5511dce2558d51f4c676eb5434b8537a5",
+        "json_pointer": "/def_short",
+        "target_type": "string",
+        "target_hash_profile": "jcs-sha256",
+        "target_sha256": "b1856a735371b0fb9a77d7b77b344bf1c3feba10526eb299703cb2deb1e3c83f"
+      }
+    },
+    {
+      "sample_class": "lemma_display",
+      "entry_id": "sum20-hist-ap-002",
+      "json_pointer": "/lemma/display",
+      "evidence_id": "ev1-31db019df47efa29540a17aed5d221e50061c0cd033283712a40320757a86555",
+      "base_record": {
+        "schema_version": "evidence-record-v0.1",
+        "id_profile": "ev1-jcs-sha256",
+        "evidence_id": "ev1-31db019df47efa29540a17aed5d221e50061c0cd033283712a40320757a86555",
+        "release_id": "sum20-hist-ap-pilot-r001",
+        "entry_id": "sum20-hist-ap-002",
+        "content_sha256": "ee0c99cd3cd9e932000efb97aa80e956bf1814157eb2b9626bc4d71f1e028bf3",
+        "json_pointer": "/lemma/display",
+        "target_type": "string",
+        "target_hash_profile": "jcs-sha256",
+        "target_sha256": "c52174b5a57244800b11dd33a5148fc190d362af081ea3b235ee3890256aa910"
+      }
+    },
+    {
+      "sample_class": "grammar_pos",
+      "entry_id": "sum20-hist-ap-003",
+      "json_pointer": "/grammar/pos",
+      "evidence_id": "ev1-b8db229d84cea3f8df790e22857c3c856b999d5c8b81e9fad738323940e8b193",
+      "base_record": {
+        "schema_version": "evidence-record-v0.1",
+        "id_profile": "ev1-jcs-sha256",
+        "evidence_id": "ev1-b8db229d84cea3f8df790e22857c3c856b999d5c8b81e9fad738323940e8b193",
+        "release_id": "sum20-hist-ap-pilot-r001",
+        "entry_id": "sum20-hist-ap-003",
+        "content_sha256": "eb663c07bb083e1e500132b28e83e97922c6c32bf4cd936e1edb71aa90c637d8",
+        "json_pointer": "/grammar/pos",
+        "target_type": "string",
+        "target_hash_profile": "jcs-sha256",
+        "target_sha256": "ba4484d5772c1e78d154a7132327bc04578864643ef5f718012117fd26101149"
+      }
+    },
+    {
+      "sample_class": "sense_definition",
+      "entry_id": "sum20-hist-ap-004",
+      "json_pointer": "/senses/0/definition",
+      "evidence_id": "ev1-e38b38646ea20c617b8c6f46d224882cc17f73d12721b9af736782f2e5094e27",
+      "base_record": {
+        "schema_version": "evidence-record-v0.1",
+        "id_profile": "ev1-jcs-sha256",
+        "evidence_id": "ev1-e38b38646ea20c617b8c6f46d224882cc17f73d12721b9af736782f2e5094e27",
+        "release_id": "sum20-hist-ap-pilot-r001",
+        "entry_id": "sum20-hist-ap-004",
+        "content_sha256": "ec4961472c82d28293c753171d75a936801eab0daa9bd4b42a0e29019ab1c144",
+        "json_pointer": "/senses/0/definition",
+        "target_type": "string",
+        "target_hash_profile": "jcs-sha256",
+        "target_sha256": "5ac41ae878bee033d1e766043a282a498e629a6e4fbedb394a957d3c2431a5f6"
+      }
+    },
+    {
+      "sample_class": "example_text",
+      "entry_id": "sum20-hist-ap-005",
+      "json_pointer": "/senses/0/examples/0/text",
+      "evidence_id": "ev1-229c9cc2654e99a83cda31f34b498c5bd8705403c1c989c522404696f5540f58",
+      "base_record": {
+        "schema_version": "evidence-record-v0.1",
+        "id_profile": "ev1-jcs-sha256",
+        "evidence_id": "ev1-229c9cc2654e99a83cda31f34b498c5bd8705403c1c989c522404696f5540f58",
+        "release_id": "sum20-hist-ap-pilot-r001",
+        "entry_id": "sum20-hist-ap-005",
+        "content_sha256": "63d7175bb84906d9123000de49727c861849dc432f1e20aae3cdeac7e32fcc47",
+        "json_pointer": "/senses/0/examples/0/text",
+        "target_type": "string",
+        "target_hash_profile": "jcs-sha256",
+        "target_sha256": "035ca62e6e5fcce452f40d412ab7d80d1bc61da53486c1b00df83846ff8a5828"
+      }
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "EC-001",
+      "corruption_class": "bad_json_pointer",
+      "sample_class": "def_short",
+      "base_evidence_id": "ev1-76281c2fb3044f065a068ff78c386585e10987d82a5ee85ecbb0f17669281206",
+      "base_entry_id": "sum20-hist-ap-001",
+      "base_json_pointer": "/def_short",
+      "mutation": {
+        "target": "evidence_record.json_pointer",
+        "operation": "replace",
+        "before": "/def_short",
+        "after": "/def_short/__missing__"
+      }
+    },
+    {
+      "case_id": "EC-002",
+      "corruption_class": "bad_json_pointer",
+      "sample_class": "lemma_display",
+      "base_evidence_id": "ev1-31db019df47efa29540a17aed5d221e50061c0cd033283712a40320757a86555",
+      "base_entry_id": "sum20-hist-ap-002",
+      "base_json_pointer": "/lemma/display",
+      "mutation": {
+        "target": "evidence_record.json_pointer",
+        "operation": "replace",
+        "before": "/lemma/display",
+        "after": "/lemma/display/__missing__"
+      }
+    },
+    {
+      "case_id": "EC-003",
+      "corruption_class": "bad_json_pointer",
+      "sample_class": "grammar_pos",
+      "base_evidence_id": "ev1-b8db229d84cea3f8df790e22857c3c856b999d5c8b81e9fad738323940e8b193",
+      "base_entry_id": "sum20-hist-ap-003",
+      "base_json_pointer": "/grammar/pos",
+      "mutation": {
+        "target": "evidence_record.json_pointer",
+        "operation": "replace",
+        "before": "/grammar/pos",
+        "after": "/grammar/pos/__missing__"
+      }
+    },
+    {
+      "case_id": "EC-004",
+      "corruption_class": "bad_json_pointer",
+      "sample_class": "sense_definition",
+      "base_evidence_id": "ev1-e38b38646ea20c617b8c6f46d224882cc17f73d12721b9af736782f2e5094e27",
+      "base_entry_id": "sum20-hist-ap-004",
+      "base_json_pointer": "/senses/0/definition",
+      "mutation": {
+        "target": "evidence_record.json_pointer",
+        "operation": "replace",
+        "before": "/senses/0/definition",
+        "after": "/senses/0/definition/__missing__"
+      }
+    },
+    {
+      "case_id": "EC-005",
+      "corruption_class": "bad_json_pointer",
+      "sample_class": "example_text",
+      "base_evidence_id": "ev1-229c9cc2654e99a83cda31f34b498c5bd8705403c1c989c522404696f5540f58",
+      "base_entry_id": "sum20-hist-ap-005",
+      "base_json_pointer": "/senses/0/examples/0/text",
+      "mutation": {
+        "target": "evidence_record.json_pointer",
+        "operation": "replace",
+        "before": "/senses/0/examples/0/text",
+        "after": "/senses/0/examples/0/text/__missing__"
+      }
+    },
+    {
+      "case_id": "EC-006",
+      "corruption_class": "stale_content_sha256",
+      "sample_class": "def_short",
+      "base_evidence_id": "ev1-76281c2fb3044f065a068ff78c386585e10987d82a5ee85ecbb0f17669281206",
+      "base_entry_id": "sum20-hist-ap-001",
+      "base_json_pointer": "/def_short",
+      "mutation": {
+        "target": "evidence_record.content_sha256",
+        "operation": "replace",
+        "before": "5ba082967e2af654d972507486a3f9e5511dce2558d51f4c676eb5434b8537a5",
+        "after": "5ba082967e2af654d972507486a3f9e5511dce2558d51f4c676eb5434b8537a0"
+      }
+    },
+    {
+      "case_id": "EC-007",
+      "corruption_class": "stale_content_sha256",
+      "sample_class": "lemma_display",
+      "base_evidence_id": "ev1-31db019df47efa29540a17aed5d221e50061c0cd033283712a40320757a86555",
+      "base_entry_id": "sum20-hist-ap-002",
+      "base_json_pointer": "/lemma/display",
+      "mutation": {
+        "target": "evidence_record.content_sha256",
+        "operation": "replace",
+        "before": "ee0c99cd3cd9e932000efb97aa80e956bf1814157eb2b9626bc4d71f1e028bf3",
+        "after": "ee0c99cd3cd9e932000efb97aa80e956bf1814157eb2b9626bc4d71f1e028bf0"
+      }
+    },
+    {
+      "case_id": "EC-008",
+      "corruption_class": "stale_content_sha256",
+      "sample_class": "grammar_pos",
+      "base_evidence_id": "ev1-b8db229d84cea3f8df790e22857c3c856b999d5c8b81e9fad738323940e8b193",
+      "base_entry_id": "sum20-hist-ap-003",
+      "base_json_pointer": "/grammar/pos",
+      "mutation": {
+        "target": "evidence_record.content_sha256",
+        "operation": "replace",
+        "before": "eb663c07bb083e1e500132b28e83e97922c6c32bf4cd936e1edb71aa90c637d8",
+        "after": "eb663c07bb083e1e500132b28e83e97922c6c32bf4cd936e1edb71aa90c637d0"
+      }
+    },
+    {
+      "case_id": "EC-009",
+      "corruption_class": "stale_content_sha256",
+      "sample_class": "sense_definition",
+      "base_evidence_id": "ev1-e38b38646ea20c617b8c6f46d224882cc17f73d12721b9af736782f2e5094e27",
+      "base_entry_id": "sum20-hist-ap-004",
+      "base_json_pointer": "/senses/0/definition",
+      "mutation": {
+        "target": "evidence_record.content_sha256",
+        "operation": "replace",
+        "before": "ec4961472c82d28293c753171d75a936801eab0daa9bd4b42a0e29019ab1c144",
+        "after": "ec4961472c82d28293c753171d75a936801eab0daa9bd4b42a0e29019ab1c140"
+      }
+    },
+    {
+      "case_id": "EC-010",
+      "corruption_class": "stale_content_sha256",
+      "sample_class": "example_text",
+      "base_evidence_id": "ev1-229c9cc2654e99a83cda31f34b498c5bd8705403c1c989c522404696f5540f58",
+      "base_entry_id": "sum20-hist-ap-005",
+      "base_json_pointer": "/senses/0/examples/0/text",
+      "mutation": {
+        "target": "evidence_record.content_sha256",
+        "operation": "replace",
+        "before": "63d7175bb84906d9123000de49727c861849dc432f1e20aae3cdeac7e32fcc47",
+        "after": "63d7175bb84906d9123000de49727c861849dc432f1e20aae3cdeac7e32fcc40"
+      }
+    },
+    {
+      "case_id": "EC-011",
+      "corruption_class": "wrong_entry_id",
+      "sample_class": "def_short",
+      "base_evidence_id": "ev1-76281c2fb3044f065a068ff78c386585e10987d82a5ee85ecbb0f17669281206",
+      "base_entry_id": "sum20-hist-ap-001",
+      "base_json_pointer": "/def_short",
+      "mutation": {
+        "target": "evidence_record.entry_id",
+        "operation": "replace",
+        "before": "sum20-hist-ap-001",
+        "after": "sum20-hist-ap-002"
+      }
+    },
+    {
+      "case_id": "EC-012",
+      "corruption_class": "wrong_entry_id",
+      "sample_class": "lemma_display",
+      "base_evidence_id": "ev1-31db019df47efa29540a17aed5d221e50061c0cd033283712a40320757a86555",
+      "base_entry_id": "sum20-hist-ap-002",
+      "base_json_pointer": "/lemma/display",
+      "mutation": {
+        "target": "evidence_record.entry_id",
+        "operation": "replace",
+        "before": "sum20-hist-ap-002",
+        "after": "sum20-hist-ap-003"
+      }
+    },
+    {
+      "case_id": "EC-013",
+      "corruption_class": "wrong_entry_id",
+      "sample_class": "grammar_pos",
+      "base_evidence_id": "ev1-b8db229d84cea3f8df790e22857c3c856b999d5c8b81e9fad738323940e8b193",
+      "base_entry_id": "sum20-hist-ap-003",
+      "base_json_pointer": "/grammar/pos",
+      "mutation": {
+        "target": "evidence_record.entry_id",
+        "operation": "replace",
+        "before": "sum20-hist-ap-003",
+        "after": "sum20-hist-ap-004"
+      }
+    },
+    {
+      "case_id": "EC-014",
+      "corruption_class": "wrong_entry_id",
+      "sample_class": "sense_definition",
+      "base_evidence_id": "ev1-e38b38646ea20c617b8c6f46d224882cc17f73d12721b9af736782f2e5094e27",
+      "base_entry_id": "sum20-hist-ap-004",
+      "base_json_pointer": "/senses/0/definition",
+      "mutation": {
+        "target": "evidence_record.entry_id",
+        "operation": "replace",
+        "before": "sum20-hist-ap-004",
+        "after": "sum20-hist-ap-005"
+      }
+    },
+    {
+      "case_id": "EC-015",
+      "corruption_class": "wrong_entry_id",
+      "sample_class": "example_text",
+      "base_evidence_id": "ev1-229c9cc2654e99a83cda31f34b498c5bd8705403c1c989c522404696f5540f58",
+      "base_entry_id": "sum20-hist-ap-005",
+      "base_json_pointer": "/senses/0/examples/0/text",
+      "mutation": {
+        "target": "evidence_record.entry_id",
+        "operation": "replace",
+        "before": "sum20-hist-ap-005",
+        "after": "sum20-hist-ap-006"
+      }
+    },
+    {
+      "case_id": "EC-016",
+      "corruption_class": "wrong_release_id",
+      "sample_class": "def_short",
+      "base_evidence_id": "ev1-76281c2fb3044f065a068ff78c386585e10987d82a5ee85ecbb0f17669281206",
+      "base_entry_id": "sum20-hist-ap-001",
+      "base_json_pointer": "/def_short",
+      "mutation": {
+        "target": "evidence_record.release_id",
+        "operation": "replace",
+        "before": "sum20-hist-ap-pilot-r001",
+        "after": "sum20-hist-ap-pilot-r002"
+      }
+    },
+    {
+      "case_id": "EC-017",
+      "corruption_class": "wrong_release_id",
+      "sample_class": "lemma_display",
+      "base_evidence_id": "ev1-31db019df47efa29540a17aed5d221e50061c0cd033283712a40320757a86555",
+      "base_entry_id": "sum20-hist-ap-002",
+      "base_json_pointer": "/lemma/display",
+      "mutation": {
+        "target": "evidence_record.release_id",
+        "operation": "replace",
+        "before": "sum20-hist-ap-pilot-r001",
+        "after": "sum20-hist-ap-pilot-r002"
+      }
+    },
+    {
+      "case_id": "EC-018",
+      "corruption_class": "wrong_release_id",
+      "sample_class": "grammar_pos",
+      "base_evidence_id": "ev1-b8db229d84cea3f8df790e22857c3c856b999d5c8b81e9fad738323940e8b193",
+      "base_entry_id": "sum20-hist-ap-003",
+      "base_json_pointer": "/grammar/pos",
+      "mutation": {
+        "target": "evidence_record.release_id",
+        "operation": "replace",
+        "before": "sum20-hist-ap-pilot-r001",
+        "after": "sum20-hist-ap-pilot-r002"
+      }
+    },
+    {
+      "case_id": "EC-019",
+      "corruption_class": "wrong_release_id",
+      "sample_class": "sense_definition",
+      "base_evidence_id": "ev1-e38b38646ea20c617b8c6f46d224882cc17f73d12721b9af736782f2e5094e27",
+      "base_entry_id": "sum20-hist-ap-004",
+      "base_json_pointer": "/senses/0/definition",
+      "mutation": {
+        "target": "evidence_record.release_id",
+        "operation": "replace",
+        "before": "sum20-hist-ap-pilot-r001",
+        "after": "sum20-hist-ap-pilot-r002"
+      }
+    },
+    {
+      "case_id": "EC-020",
+      "corruption_class": "wrong_release_id",
+      "sample_class": "example_text",
+      "base_evidence_id": "ev1-229c9cc2654e99a83cda31f34b498c5bd8705403c1c989c522404696f5540f58",
+      "base_entry_id": "sum20-hist-ap-005",
+      "base_json_pointer": "/senses/0/examples/0/text",
+      "mutation": {
+        "target": "evidence_record.release_id",
+        "operation": "replace",
+        "before": "sum20-hist-ap-pilot-r001",
+        "after": "sum20-hist-ap-pilot-r002"
+      }
+    },
+    {
+      "case_id": "EC-021",
+      "corruption_class": "modified_target_sha256",
+      "sample_class": "def_short",
+      "base_evidence_id": "ev1-76281c2fb3044f065a068ff78c386585e10987d82a5ee85ecbb0f17669281206",
+      "base_entry_id": "sum20-hist-ap-001",
+      "base_json_pointer": "/def_short",
+      "mutation": {
+        "target": "evidence_record.target_sha256",
+        "operation": "replace",
+        "before": "b1856a735371b0fb9a77d7b77b344bf1c3feba10526eb299703cb2deb1e3c83f",
+        "after": "b1856a735371b0fb9a77d7b77b344bf1c3feba10526eb299703cb2deb1e3c830"
+      }
+    },
+    {
+      "case_id": "EC-022",
+      "corruption_class": "modified_target_sha256",
+      "sample_class": "lemma_display",
+      "base_evidence_id": "ev1-31db019df47efa29540a17aed5d221e50061c0cd033283712a40320757a86555",
+      "base_entry_id": "sum20-hist-ap-002",
+      "base_json_pointer": "/lemma/display",
+      "mutation": {
+        "target": "evidence_record.target_sha256",
+        "operation": "replace",
+        "before": "c52174b5a57244800b11dd33a5148fc190d362af081ea3b235ee3890256aa910",
+        "after": "c52174b5a57244800b11dd33a5148fc190d362af081ea3b235ee3890256aa911"
+      }
+    },
+    {
+      "case_id": "EC-023",
+      "corruption_class": "modified_target_sha256",
+      "sample_class": "grammar_pos",
+      "base_evidence_id": "ev1-b8db229d84cea3f8df790e22857c3c856b999d5c8b81e9fad738323940e8b193",
+      "base_entry_id": "sum20-hist-ap-003",
+      "base_json_pointer": "/grammar/pos",
+      "mutation": {
+        "target": "evidence_record.target_sha256",
+        "operation": "replace",
+        "before": "ba4484d5772c1e78d154a7132327bc04578864643ef5f718012117fd26101149",
+        "after": "ba4484d5772c1e78d154a7132327bc04578864643ef5f718012117fd26101140"
+      }
+    },
+    {
+      "case_id": "EC-024",
+      "corruption_class": "modified_target_sha256",
+      "sample_class": "sense_definition",
+      "base_evidence_id": "ev1-e38b38646ea20c617b8c6f46d224882cc17f73d12721b9af736782f2e5094e27",
+      "base_entry_id": "sum20-hist-ap-004",
+      "base_json_pointer": "/senses/0/definition",
+      "mutation": {
+        "target": "evidence_record.target_sha256",
+        "operation": "replace",
+        "before": "5ac41ae878bee033d1e766043a282a498e629a6e4fbedb394a957d3c2431a5f6",
+        "after": "5ac41ae878bee033d1e766043a282a498e629a6e4fbedb394a957d3c2431a5f0"
+      }
+    },
+    {
+      "case_id": "EC-025",
+      "corruption_class": "modified_target_sha256",
+      "sample_class": "example_text",
+      "base_evidence_id": "ev1-229c9cc2654e99a83cda31f34b498c5bd8705403c1c989c522404696f5540f58",
+      "base_entry_id": "sum20-hist-ap-005",
+      "base_json_pointer": "/senses/0/examples/0/text",
+      "mutation": {
+        "target": "evidence_record.target_sha256",
+        "operation": "replace",
+        "before": "035ca62e6e5fcce452f40d412ab7d80d1bc61da53486c1b00df83846ff8a5828",
+        "after": "035ca62e6e5fcce452f40d412ab7d80d1bc61da53486c1b00df83846ff8a5820"
+      }
+    },
+    {
+      "case_id": "EC-026",
+      "corruption_class": "modified_evidence_id",
+      "sample_class": "def_short",
+      "base_evidence_id": "ev1-76281c2fb3044f065a068ff78c386585e10987d82a5ee85ecbb0f17669281206",
+      "base_entry_id": "sum20-hist-ap-001",
+      "base_json_pointer": "/def_short",
+      "mutation": {
+        "target": "evidence_record.evidence_id",
+        "operation": "replace",
+        "before": "ev1-76281c2fb3044f065a068ff78c386585e10987d82a5ee85ecbb0f17669281206",
+        "after": "ev1-76281c2fb3044f065a068ff78c386585e10987d82a5ee85ecbb0f17669281200"
+      }
+    },
+    {
+      "case_id": "EC-027",
+      "corruption_class": "modified_evidence_id",
+      "sample_class": "lemma_display",
+      "base_evidence_id": "ev1-31db019df47efa29540a17aed5d221e50061c0cd033283712a40320757a86555",
+      "base_entry_id": "sum20-hist-ap-002",
+      "base_json_pointer": "/lemma/display",
+      "mutation": {
+        "target": "evidence_record.evidence_id",
+        "operation": "replace",
+        "before": "ev1-31db019df47efa29540a17aed5d221e50061c0cd033283712a40320757a86555",
+        "after": "ev1-31db019df47efa29540a17aed5d221e50061c0cd033283712a40320757a86550"
+      }
+    },
+    {
+      "case_id": "EC-028",
+      "corruption_class": "modified_evidence_id",
+      "sample_class": "grammar_pos",
+      "base_evidence_id": "ev1-b8db229d84cea3f8df790e22857c3c856b999d5c8b81e9fad738323940e8b193",
+      "base_entry_id": "sum20-hist-ap-003",
+      "base_json_pointer": "/grammar/pos",
+      "mutation": {
+        "target": "evidence_record.evidence_id",
+        "operation": "replace",
+        "before": "ev1-b8db229d84cea3f8df790e22857c3c856b999d5c8b81e9fad738323940e8b193",
+        "after": "ev1-b8db229d84cea3f8df790e22857c3c856b999d5c8b81e9fad738323940e8b190"
+      }
+    },
+    {
+      "case_id": "EC-029",
+      "corruption_class": "modified_evidence_id",
+      "sample_class": "sense_definition",
+      "base_evidence_id": "ev1-e38b38646ea20c617b8c6f46d224882cc17f73d12721b9af736782f2e5094e27",
+      "base_entry_id": "sum20-hist-ap-004",
+      "base_json_pointer": "/senses/0/definition",
+      "mutation": {
+        "target": "evidence_record.evidence_id",
+        "operation": "replace",
+        "before": "ev1-e38b38646ea20c617b8c6f46d224882cc17f73d12721b9af736782f2e5094e27",
+        "after": "ev1-e38b38646ea20c617b8c6f46d224882cc17f73d12721b9af736782f2e5094e20"
+      }
+    },
+    {
+      "case_id": "EC-030",
+      "corruption_class": "modified_evidence_id",
+      "sample_class": "example_text",
+      "base_evidence_id": "ev1-229c9cc2654e99a83cda31f34b498c5bd8705403c1c989c522404696f5540f58",
+      "base_entry_id": "sum20-hist-ap-005",
+      "base_json_pointer": "/senses/0/examples/0/text",
+      "mutation": {
+        "target": "evidence_record.evidence_id",
+        "operation": "replace",
+        "before": "ev1-229c9cc2654e99a83cda31f34b498c5bd8705403c1c989c522404696f5540f58",
+        "after": "ev1-229c9cc2654e99a83cda31f34b498c5bd8705403c1c989c522404696f5540f50"
+      }
+    },
+    {
+      "case_id": "EC-031",
+      "corruption_class": "wrong_target_type",
+      "sample_class": "def_short",
+      "base_evidence_id": "ev1-76281c2fb3044f065a068ff78c386585e10987d82a5ee85ecbb0f17669281206",
+      "base_entry_id": "sum20-hist-ap-001",
+      "base_json_pointer": "/def_short",
+      "mutation": {
+        "target": "evidence_record.target_type",
+        "operation": "replace",
+        "before": "string",
+        "after": "number"
+      }
+    },
+    {
+      "case_id": "EC-032",
+      "corruption_class": "wrong_target_type",
+      "sample_class": "lemma_display",
+      "base_evidence_id": "ev1-31db019df47efa29540a17aed5d221e50061c0cd033283712a40320757a86555",
+      "base_entry_id": "sum20-hist-ap-002",
+      "base_json_pointer": "/lemma/display",
+      "mutation": {
+        "target": "evidence_record.target_type",
+        "operation": "replace",
+        "before": "string",
+        "after": "number"
+      }
+    },
+    {
+      "case_id": "EC-033",
+      "corruption_class": "wrong_target_type",
+      "sample_class": "grammar_pos",
+      "base_evidence_id": "ev1-b8db229d84cea3f8df790e22857c3c856b999d5c8b81e9fad738323940e8b193",
+      "base_entry_id": "sum20-hist-ap-003",
+      "base_json_pointer": "/grammar/pos",
+      "mutation": {
+        "target": "evidence_record.target_type",
+        "operation": "replace",
+        "before": "string",
+        "after": "number"
+      }
+    },
+    {
+      "case_id": "EC-034",
+      "corruption_class": "wrong_target_type",
+      "sample_class": "sense_definition",
+      "base_evidence_id": "ev1-e38b38646ea20c617b8c6f46d224882cc17f73d12721b9af736782f2e5094e27",
+      "base_entry_id": "sum20-hist-ap-004",
+      "base_json_pointer": "/senses/0/definition",
+      "mutation": {
+        "target": "evidence_record.target_type",
+        "operation": "replace",
+        "before": "string",
+        "after": "number"
+      }
+    },
+    {
+      "case_id": "EC-035",
+      "corruption_class": "wrong_target_type",
+      "sample_class": "example_text",
+      "base_evidence_id": "ev1-229c9cc2654e99a83cda31f34b498c5bd8705403c1c989c522404696f5540f58",
+      "base_entry_id": "sum20-hist-ap-005",
+      "base_json_pointer": "/senses/0/examples/0/text",
+      "mutation": {
+        "target": "evidence_record.target_type",
+        "operation": "replace",
+        "before": "string",
+        "after": "number"
+      }
+    },
+    {
+      "case_id": "EC-036",
+      "corruption_class": "canonical_value_mutation",
+      "sample_class": "def_short",
+      "base_evidence_id": "ev1-76281c2fb3044f065a068ff78c386585e10987d82a5ee85ecbb0f17669281206",
+      "base_entry_id": "sum20-hist-ap-001",
+      "base_json_pointer": "/def_short",
+      "mutation": {
+        "target": "canonical_entry.scalar_at_json_pointer",
+        "operation": "mutate_scalar",
+        "entry_id": "sum20-hist-ap-001",
+        "json_pointer": "/def_short",
+        "before_target_sha256": "b1856a735371b0fb9a77d7b77b344bf1c3feba10526eb299703cb2deb1e3c83f",
+        "after_target_sha256": "bbbe4962fe5bb3962b7463a93771e4e9fca9daf388b5492ad3733e21ea1c571d",
+        "rule": {
+          "string": "append ' [TAMPERED]'",
+          "boolean": "logical NOT",
+          "number": "add 1",
+          "null": "replace with string 'TAMPERED'"
+        }
+      }
+    },
+    {
+      "case_id": "EC-037",
+      "corruption_class": "canonical_value_mutation",
+      "sample_class": "lemma_display",
+      "base_evidence_id": "ev1-31db019df47efa29540a17aed5d221e50061c0cd033283712a40320757a86555",
+      "base_entry_id": "sum20-hist-ap-002",
+      "base_json_pointer": "/lemma/display",
+      "mutation": {
+        "target": "canonical_entry.scalar_at_json_pointer",
+        "operation": "mutate_scalar",
+        "entry_id": "sum20-hist-ap-002",
+        "json_pointer": "/lemma/display",
+        "before_target_sha256": "c52174b5a57244800b11dd33a5148fc190d362af081ea3b235ee3890256aa910",
+        "after_target_sha256": "12411bdbef793cd8204e9ef850a136cf7c0708ec91748ee45cabcb2f3b830898",
+        "rule": {
+          "string": "append ' [TAMPERED]'",
+          "boolean": "logical NOT",
+          "number": "add 1",
+          "null": "replace with string 'TAMPERED'"
+        }
+      }
+    },
+    {
+      "case_id": "EC-038",
+      "corruption_class": "canonical_value_mutation",
+      "sample_class": "grammar_pos",
+      "base_evidence_id": "ev1-b8db229d84cea3f8df790e22857c3c856b999d5c8b81e9fad738323940e8b193",
+      "base_entry_id": "sum20-hist-ap-003",
+      "base_json_pointer": "/grammar/pos",
+      "mutation": {
+        "target": "canonical_entry.scalar_at_json_pointer",
+        "operation": "mutate_scalar",
+        "entry_id": "sum20-hist-ap-003",
+        "json_pointer": "/grammar/pos",
+        "before_target_sha256": "ba4484d5772c1e78d154a7132327bc04578864643ef5f718012117fd26101149",
+        "after_target_sha256": "5b02ec851f6ff670d6a1a9dd088f30472a52189e345266641d16c9735188c991",
+        "rule": {
+          "string": "append ' [TAMPERED]'",
+          "boolean": "logical NOT",
+          "number": "add 1",
+          "null": "replace with string 'TAMPERED'"
+        }
+      }
+    },
+    {
+      "case_id": "EC-039",
+      "corruption_class": "canonical_value_mutation",
+      "sample_class": "sense_definition",
+      "base_evidence_id": "ev1-e38b38646ea20c617b8c6f46d224882cc17f73d12721b9af736782f2e5094e27",
+      "base_entry_id": "sum20-hist-ap-004",
+      "base_json_pointer": "/senses/0/definition",
+      "mutation": {
+        "target": "canonical_entry.scalar_at_json_pointer",
+        "operation": "mutate_scalar",
+        "entry_id": "sum20-hist-ap-004",
+        "json_pointer": "/senses/0/definition",
+        "before_target_sha256": "5ac41ae878bee033d1e766043a282a498e629a6e4fbedb394a957d3c2431a5f6",
+        "after_target_sha256": "7801809324fa36fc1ad216c12677d517022d3462a331491c2675f806bc1d0e1a",
+        "rule": {
+          "string": "append ' [TAMPERED]'",
+          "boolean": "logical NOT",
+          "number": "add 1",
+          "null": "replace with string 'TAMPERED'"
+        }
+      }
+    },
+    {
+      "case_id": "EC-040",
+      "corruption_class": "canonical_value_mutation",
+      "sample_class": "example_text",
+      "base_evidence_id": "ev1-229c9cc2654e99a83cda31f34b498c5bd8705403c1c989c522404696f5540f58",
+      "base_entry_id": "sum20-hist-ap-005",
+      "base_json_pointer": "/senses/0/examples/0/text",
+      "mutation": {
+        "target": "canonical_entry.scalar_at_json_pointer",
+        "operation": "mutate_scalar",
+        "entry_id": "sum20-hist-ap-005",
+        "json_pointer": "/senses/0/examples/0/text",
+        "before_target_sha256": "035ca62e6e5fcce452f40d412ab7d80d1bc61da53486c1b00df83846ff8a5828",
+        "after_target_sha256": "b32ddd2d5694c3e4faaab532baaec8400cd60465db224a0704a55503dfd93bc1",
+        "rule": {
+          "string": "append ' [TAMPERED]'",
+          "boolean": "logical NOT",
+          "number": "add 1",
+          "null": "replace with string 'TAMPERED'"
+        }
+      }
+    },
+    {
+      "case_id": "EC-041",
+      "corruption_class": "deleted_anchor",
+      "sample_class": "def_short",
+      "base_evidence_id": "ev1-76281c2fb3044f065a068ff78c386585e10987d82a5ee85ecbb0f17669281206",
+      "base_entry_id": "sum20-hist-ap-001",
+      "base_json_pointer": "/def_short",
+      "mutation": {
+        "target": "runtime_evidence_indexes",
+        "operation": "delete_anchor",
+        "evidence_id": "ev1-76281c2fb3044f065a068ff78c386585e10987d82a5ee85ecbb0f17669281206",
+        "entry_id": "sum20-hist-ap-001",
+        "json_pointer": "/def_short"
+      }
+    },
+    {
+      "case_id": "EC-042",
+      "corruption_class": "deleted_anchor",
+      "sample_class": "lemma_display",
+      "base_evidence_id": "ev1-31db019df47efa29540a17aed5d221e50061c0cd033283712a40320757a86555",
+      "base_entry_id": "sum20-hist-ap-002",
+      "base_json_pointer": "/lemma/display",
+      "mutation": {
+        "target": "runtime_evidence_indexes",
+        "operation": "delete_anchor",
+        "evidence_id": "ev1-31db019df47efa29540a17aed5d221e50061c0cd033283712a40320757a86555",
+        "entry_id": "sum20-hist-ap-002",
+        "json_pointer": "/lemma/display"
+      }
+    },
+    {
+      "case_id": "EC-043",
+      "corruption_class": "deleted_anchor",
+      "sample_class": "grammar_pos",
+      "base_evidence_id": "ev1-b8db229d84cea3f8df790e22857c3c856b999d5c8b81e9fad738323940e8b193",
+      "base_entry_id": "sum20-hist-ap-003",
+      "base_json_pointer": "/grammar/pos",
+      "mutation": {
+        "target": "runtime_evidence_indexes",
+        "operation": "delete_anchor",
+        "evidence_id": "ev1-b8db229d84cea3f8df790e22857c3c856b999d5c8b81e9fad738323940e8b193",
+        "entry_id": "sum20-hist-ap-003",
+        "json_pointer": "/grammar/pos"
+      }
+    },
+    {
+      "case_id": "EC-044",
+      "corruption_class": "deleted_anchor",
+      "sample_class": "sense_definition",
+      "base_evidence_id": "ev1-e38b38646ea20c617b8c6f46d224882cc17f73d12721b9af736782f2e5094e27",
+      "base_entry_id": "sum20-hist-ap-004",
+      "base_json_pointer": "/senses/0/definition",
+      "mutation": {
+        "target": "runtime_evidence_indexes",
+        "operation": "delete_anchor",
+        "evidence_id": "ev1-e38b38646ea20c617b8c6f46d224882cc17f73d12721b9af736782f2e5094e27",
+        "entry_id": "sum20-hist-ap-004",
+        "json_pointer": "/senses/0/definition"
+      }
+    },
+    {
+      "case_id": "EC-045",
+      "corruption_class": "deleted_anchor",
+      "sample_class": "example_text",
+      "base_evidence_id": "ev1-229c9cc2654e99a83cda31f34b498c5bd8705403c1c989c522404696f5540f58",
+      "base_entry_id": "sum20-hist-ap-005",
+      "base_json_pointer": "/senses/0/examples/0/text",
+      "mutation": {
+        "target": "runtime_evidence_indexes",
+        "operation": "delete_anchor",
+        "evidence_id": "ev1-229c9cc2654e99a83cda31f34b498c5bd8705403c1c989c522404696f5540f58",
+        "entry_id": "sum20-hist-ap-005",
+        "json_pointer": "/senses/0/examples/0/text"
+      }
+    }
+  ]
+}

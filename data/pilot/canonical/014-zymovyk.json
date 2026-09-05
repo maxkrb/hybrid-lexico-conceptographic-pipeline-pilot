@@ -1,0 +1,15 @@
+{
+  "schema_version": "lex-entry-v0.4",
+  "dataset_id": "sum20-hist-ap-pilot-v0",
+  "entry_id": "sum20-hist-ap-014",
+  "source": {"raw_path": "data/pilot/raw/014-zymovyk.txt", "raw_sha256": "14d1d23a3fb575e726b4c681ad7ee39a0a97c0e65d90662ee1013a2e5c00a3ba", "source_file": "4e21e575-8d98-4c3b-82a1-8f023a00d1ca.docx"},
+  "lemma": {"display": "ЗИМОВИ́К", "search": "ЗИМОВИК", "labels_source": ["рідко."], "variants": []},
+  "grammar": {"pos": "NOUN", "pos_status": "inferred_from_headword_morphology", "gender": "masculine", "gender_source": "ч.", "genitive_source": "а́"},
+  "def_short": "Те саме, що зимівни́к 1.",
+  "def_short_source_pointer": "/senses/0/definition",
+  "senses": [
+    {"sense_id": "sum20-hist-ap-014-s1", "labels_source": [], "definition": "Те саме, що зимівни́к 1.", "examples": [{"example_id": "sum20-hist-ap-014-s1-e1", "text": "Уже останні дикі гуси в вирій полетіли, пасіку в зимовик поставили", "source_ref": "Ганна Барвінок"}], "cross_references": [{"relation": "same_as", "target_display": "зимівни́к 1"}]},
+    {"sense_id": "sum20-hist-ap-014-s2", "labels_source": ["іст."], "definition": "Те саме, що зимівни́к 2.", "examples": [{"example_id": "sum20-hist-ap-014-s2-e1", "text": "Недовго він зоставався в коші, .. помандрував собі у степи, щоб де-небудь сісти зимовиком і завести пасіку, бо дуже кохався у бджолі", "source_ref": "О. Стороженко"}], "cross_references": [{"relation": "same_as", "target_display": "зимівни́к 2"}]}
+  ],
+  "phrases": []
+}

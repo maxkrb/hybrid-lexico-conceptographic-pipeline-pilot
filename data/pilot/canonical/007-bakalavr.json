@@ -1,0 +1,42 @@
+{
+  "schema_version": "lex-entry-v0.4",
+  "dataset_id": "sum20-hist-ap-pilot-v0",
+  "entry_id": "sum20-hist-ap-007",
+  "source": {
+    "raw_path": "data/pilot/raw/007-bakalavr.txt",
+    "raw_sha256": "b9d2c6e582db1ce861bd5549e9c271e4e5ec4bcbac6cbc4c9419ba66919a4311",
+    "source_file": "4e21e575-8d98-4c3b-82a1-8f023a00d1ca.docx"
+  },
+  "lemma": {"display": "БАКАЛА́ВР", "search": "БАКАЛАВР", "variants": []},
+  "grammar": {"pos": "NOUN", "pos_status": "inferred_from_headword_morphology", "gender": "masculine", "gender_source": "ч.", "genitive_source": "а"},
+  "def_short": "Найнижчий науковий ступінь у старовинних і деяких сучасних західноєвропейських університетах.",
+  "def_short_source_pointer": "/senses/0/definition",
+  "senses": [
+    {
+      "sense_id": "sum20-hist-ap-007-s1",
+      "labels_source": ["іст."],
+      "definition": "Найнижчий науковий ступінь у старовинних і деяких сучасних західноєвропейських університетах.",
+      "examples": [{"example_id": "sum20-hist-ap-007-s1-e1", "text": "Здобуття Юрієм Дрогобичем у 1470 р. ступеня бакалавра, а в 1472 – магістра свідчить про його наукові здібності й неабияку наполегливість у подоланні труднощів", "source_ref": "з наук. літ."}],
+      "cross_references": []
+    },
+    {
+      "sense_id": "sum20-hist-ap-007-s2",
+      "labels_source": ["іст."],
+      "definition": "Звання викладача в духовних академіях Росії і України до 1869 р.",
+      "examples": [{"example_id": "sum20-hist-ap-007-s2-e1", "text": "Другого дня пішла чутка між студентами, що Воздвиженського .. мали навіть замір зоставити при академії бакалавром", "source_ref": "І. Нечуй-Левицький"}],
+      "cross_references": []
+    },
+    {
+      "sense_id": "sum20-hist-ap-007-s3",
+      "labels_source": [],
+      "definition": "Той, хто здобув чотири- або п'ятирічну вищу освіту, склавши іспити чи захистивши бакалаврську роботу.",
+      "examples": [
+        {"example_id": "sum20-hist-ap-007-s3-e1", "text": "Бакалавр – освітньо-кваліфікаційний рівень вищої освіти особи, яка на основі повної загальної середньої освіти здобула базову вищу освіту", "source_ref": "з мови документів"},
+        {"example_id": "sum20-hist-ap-007-s3-e2", "text": "Державне замовлення на бакалаврів", "source_ref": ""},
+        {"example_id": "sum20-hist-ap-007-s3-e3", "text": "Навчальна програма з української мови для бакалаврів", "source_ref": ""}
+      ],
+      "cross_references": []
+    }
+  ],
+  "phrases": []
+}

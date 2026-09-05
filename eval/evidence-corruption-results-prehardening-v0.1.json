@@ -1,0 +1,336 @@
+{
+  "experiment_id": "p1-evidence-corruption-prehardening-v0.1",
+  "release_id": "sum20-hist-ap-pilot-r001",
+  "registry_version": "evidence-registry-v0.1",
+  "profile": {
+    "corruption_classes": [
+      "bad_json_pointer",
+      "stale_content_sha256",
+      "wrong_entry_id",
+      "wrong_release_id",
+      "modified_target_sha256",
+      "modified_evidence_id",
+      "wrong_target_type",
+      "canonical_value_mutation",
+      "deleted_anchor"
+    ],
+    "sample_classes": [
+      "def_short",
+      "lemma_display",
+      "grammar_pos",
+      "sense_definition",
+      "example_text"
+    ],
+    "injections_per_class": 5,
+    "total_injections": 45,
+    "frozen_artifacts_mutated": false,
+    "method": "in-memory fault injection over copies/runtime state"
+  },
+  "samples": [
+    {
+      "sample_class": "def_short",
+      "entry_id": "sum20-hist-ap-001",
+      "json_pointer": "/def_short",
+      "evidence_id": "ev1-76281c2fb3044f065a068ff78c386585e10987d82a5ee85ecbb0f17669281206"
+    },
+    {
+      "sample_class": "lemma_display",
+      "entry_id": "sum20-hist-ap-002",
+      "json_pointer": "/lemma/display",
+      "evidence_id": "ev1-31db019df47efa29540a17aed5d221e50061c0cd033283712a40320757a86555"
+    },
+    {
+      "sample_class": "grammar_pos",
+      "entry_id": "sum20-hist-ap-003",
+      "json_pointer": "/grammar/pos",
+      "evidence_id": "ev1-b8db229d84cea3f8df790e22857c3c856b999d5c8b81e9fad738323940e8b193"
+    },
+    {
+      "sample_class": "sense_definition",
+      "entry_id": "sum20-hist-ap-004",
+      "json_pointer": "/senses/0/definition",
+      "evidence_id": "ev1-e38b38646ea20c617b8c6f46d224882cc17f73d12721b9af736782f2e5094e27"
+    },
+    {
+      "sample_class": "example_text",
+      "entry_id": "sum20-hist-ap-005",
+      "json_pointer": "/senses/0/examples/0/text",
+      "evidence_id": "ev1-229c9cc2654e99a83cda31f34b498c5bd8705403c1c989c522404696f5540f58"
+    }
+  ],
+  "runtime_pre_hardening": {
+    "injected": 45,
+    "detected": 24,
+    "EVDR": 0.5333333333333333,
+    "by_class": {
+      "bad_json_pointer": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "stale_content_sha256": {
+        "injected": 5,
+        "detected": 0,
+        "rate": 0.0
+      },
+      "wrong_entry_id": {
+        "injected": 5,
+        "detected": 4,
+        "rate": 0.8
+      },
+      "wrong_release_id": {
+        "injected": 5,
+        "detected": 0,
+        "rate": 0.0
+      },
+      "modified_target_sha256": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "modified_evidence_id": {
+        "injected": 5,
+        "detected": 0,
+        "rate": 0.0
+      },
+      "wrong_target_type": {
+        "injected": 5,
+        "detected": 0,
+        "rate": 0.0
+      },
+      "canonical_value_mutation": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "deleted_anchor": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      }
+    },
+    "undetected": [
+      {
+        "corruption_class": "stale_content_sha256",
+        "sample_class": "def_short",
+        "entry_id": "sum20-hist-ap-001",
+        "json_pointer": "/def_short",
+        "detected": false,
+        "reason": "RUNTIME_ACCEPTED_CORRUPTION"
+      },
+      {
+        "corruption_class": "stale_content_sha256",
+        "sample_class": "lemma_display",
+        "entry_id": "sum20-hist-ap-002",
+        "json_pointer": "/lemma/display",
+        "detected": false,
+        "reason": "RUNTIME_ACCEPTED_CORRUPTION"
+      },
+      {
+        "corruption_class": "stale_content_sha256",
+        "sample_class": "grammar_pos",
+        "entry_id": "sum20-hist-ap-003",
+        "json_pointer": "/grammar/pos",
+        "detected": false,
+        "reason": "RUNTIME_ACCEPTED_CORRUPTION"
+      },
+      {
+        "corruption_class": "stale_content_sha256",
+        "sample_class": "sense_definition",
+        "entry_id": "sum20-hist-ap-004",
+        "json_pointer": "/senses/0/definition",
+        "detected": false,
+        "reason": "RUNTIME_ACCEPTED_CORRUPTION"
+      },
+      {
+        "corruption_class": "stale_content_sha256",
+        "sample_class": "example_text",
+        "entry_id": "sum20-hist-ap-005",
+        "json_pointer": "/senses/0/examples/0/text",
+        "detected": false,
+        "reason": "RUNTIME_ACCEPTED_CORRUPTION"
+      },
+      {
+        "corruption_class": "wrong_entry_id",
+        "sample_class": "grammar_pos",
+        "entry_id": "sum20-hist-ap-003",
+        "json_pointer": "/grammar/pos",
+        "detected": false,
+        "reason": "RUNTIME_ACCEPTED_CORRUPTION"
+      },
+      {
+        "corruption_class": "wrong_release_id",
+        "sample_class": "def_short",
+        "entry_id": "sum20-hist-ap-001",
+        "json_pointer": "/def_short",
+        "detected": false,
+        "reason": "RUNTIME_ACCEPTED_CORRUPTION"
+      },
+      {
+        "corruption_class": "wrong_release_id",
+        "sample_class": "lemma_display",
+        "entry_id": "sum20-hist-ap-002",
+        "json_pointer": "/lemma/display",
+        "detected": false,
+        "reason": "RUNTIME_ACCEPTED_CORRUPTION"
+      },
+      {
+        "corruption_class": "wrong_release_id",
+        "sample_class": "grammar_pos",
+        "entry_id": "sum20-hist-ap-003",
+        "json_pointer": "/grammar/pos",
+        "detected": false,
+        "reason": "RUNTIME_ACCEPTED_CORRUPTION"
+      },
+      {
+        "corruption_class": "wrong_release_id",
+        "sample_class": "sense_definition",
+        "entry_id": "sum20-hist-ap-004",
+        "json_pointer": "/senses/0/definition",
+        "detected": false,
+        "reason": "RUNTIME_ACCEPTED_CORRUPTION"
+      },
+      {
+        "corruption_class": "wrong_release_id",
+        "sample_class": "example_text",
+        "entry_id": "sum20-hist-ap-005",
+        "json_pointer": "/senses/0/examples/0/text",
+        "detected": false,
+        "reason": "RUNTIME_ACCEPTED_CORRUPTION"
+      },
+      {
+        "corruption_class": "modified_evidence_id",
+        "sample_class": "def_short",
+        "entry_id": "sum20-hist-ap-001",
+        "json_pointer": "/def_short",
+        "detected": false,
+        "reason": "RUNTIME_ACCEPTED_CORRUPTION"
+      },
+      {
+        "corruption_class": "modified_evidence_id",
+        "sample_class": "lemma_display",
+        "entry_id": "sum20-hist-ap-002",
+        "json_pointer": "/lemma/display",
+        "detected": false,
+        "reason": "RUNTIME_ACCEPTED_CORRUPTION"
+      },
+      {
+        "corruption_class": "modified_evidence_id",
+        "sample_class": "grammar_pos",
+        "entry_id": "sum20-hist-ap-003",
+        "json_pointer": "/grammar/pos",
+        "detected": false,
+        "reason": "RUNTIME_ACCEPTED_CORRUPTION"
+      },
+      {
+        "corruption_class": "modified_evidence_id",
+        "sample_class": "sense_definition",
+        "entry_id": "sum20-hist-ap-004",
+        "json_pointer": "/senses/0/definition",
+        "detected": false,
+        "reason": "RUNTIME_ACCEPTED_CORRUPTION"
+      },
+      {
+        "corruption_class": "modified_evidence_id",
+        "sample_class": "example_text",
+        "entry_id": "sum20-hist-ap-005",
+        "json_pointer": "/senses/0/examples/0/text",
+        "detected": false,
+        "reason": "RUNTIME_ACCEPTED_CORRUPTION"
+      },
+      {
+        "corruption_class": "wrong_target_type",
+        "sample_class": "def_short",
+        "entry_id": "sum20-hist-ap-001",
+        "json_pointer": "/def_short",
+        "detected": false,
+        "reason": "RUNTIME_ACCEPTED_CORRUPTION"
+      },
+      {
+        "corruption_class": "wrong_target_type",
+        "sample_class": "lemma_display",
+        "entry_id": "sum20-hist-ap-002",
+        "json_pointer": "/lemma/display",
+        "detected": false,
+        "reason": "RUNTIME_ACCEPTED_CORRUPTION"
+      },
+      {
+        "corruption_class": "wrong_target_type",
+        "sample_class": "grammar_pos",
+        "entry_id": "sum20-hist-ap-003",
+        "json_pointer": "/grammar/pos",
+        "detected": false,
+        "reason": "RUNTIME_ACCEPTED_CORRUPTION"
+      },
+      {
+        "corruption_class": "wrong_target_type",
+        "sample_class": "sense_definition",
+        "entry_id": "sum20-hist-ap-004",
+        "json_pointer": "/senses/0/definition",
+        "detected": false,
+        "reason": "RUNTIME_ACCEPTED_CORRUPTION"
+      },
+      {
+        "corruption_class": "wrong_target_type",
+        "sample_class": "example_text",
+        "entry_id": "sum20-hist-ap-005",
+        "json_pointer": "/senses/0/examples/0/text",
+        "detected": false,
+        "reason": "RUNTIME_ACCEPTED_CORRUPTION"
+      }
+    ]
+  },
+  "full_contract_verifier": {
+    "injected": 45,
+    "detected": 45,
+    "EVDR": 1.0,
+    "by_class": {
+      "bad_json_pointer": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "stale_content_sha256": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "wrong_entry_id": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "wrong_release_id": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "modified_target_sha256": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "modified_evidence_id": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "wrong_target_type": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "canonical_value_mutation": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "deleted_anchor": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      }
+    },
+    "undetected": []
+  }
+}

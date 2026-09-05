@@ -1,0 +1,113 @@
+{
+  "profile_id": "p1-evidence-corruption-profile-v0.1",
+  "release_id": "sum20-hist-ap-pilot-r001",
+  "registry_version": "evidence-registry-v0.1",
+  "purpose": "Deterministic, versioned fault-injection profile for P1 evidence-chain integrity evaluation.",
+  "frozen_artifacts_mutated": false,
+  "artifact_policy": {
+    "canonical_storage": "never store corrupted copies under data/pilot/canonical",
+    "case_manifest": "store exact mutation descriptors and base Evidence Records",
+    "mutation_application": "in-memory only",
+    "randomness": "none"
+  },
+  "sample_policy": "Five explicitly pinned Evidence Records representing def_short, lemma, POS, sense definition, and example text.",
+  "samples": [
+    {
+      "sample_class": "def_short",
+      "entry_id": "sum20-hist-ap-001",
+      "json_pointer": "/def_short",
+      "evidence_id": "ev1-76281c2fb3044f065a068ff78c386585e10987d82a5ee85ecbb0f17669281206"
+    },
+    {
+      "sample_class": "lemma_display",
+      "entry_id": "sum20-hist-ap-002",
+      "json_pointer": "/lemma/display",
+      "evidence_id": "ev1-31db019df47efa29540a17aed5d221e50061c0cd033283712a40320757a86555"
+    },
+    {
+      "sample_class": "grammar_pos",
+      "entry_id": "sum20-hist-ap-003",
+      "json_pointer": "/grammar/pos",
+      "evidence_id": "ev1-b8db229d84cea3f8df790e22857c3c856b999d5c8b81e9fad738323940e8b193"
+    },
+    {
+      "sample_class": "sense_definition",
+      "entry_id": "sum20-hist-ap-004",
+      "json_pointer": "/senses/0/definition",
+      "evidence_id": "ev1-e38b38646ea20c617b8c6f46d224882cc17f73d12721b9af736782f2e5094e27"
+    },
+    {
+      "sample_class": "example_text",
+      "entry_id": "sum20-hist-ap-005",
+      "json_pointer": "/senses/0/examples/0/text",
+      "evidence_id": "ev1-229c9cc2654e99a83cda31f34b498c5bd8705403c1c989c522404696f5540f58"
+    }
+  ],
+  "corruption_classes": [
+    {
+      "id": "bad_json_pointer",
+      "target": "evidence_record.json_pointer",
+      "operation": "append_literal",
+      "literal": "/__missing__"
+    },
+    {
+      "id": "stale_content_sha256",
+      "target": "evidence_record.content_sha256",
+      "operation": "flip_last_hex",
+      "rule": "replace last hex digit with 0 unless already 0, then 1"
+    },
+    {
+      "id": "wrong_entry_id",
+      "target": "evidence_record.entry_id",
+      "operation": "next_lexicographic_entry_id",
+      "source": "frozen content manifest"
+    },
+    {
+      "id": "wrong_release_id",
+      "target": "evidence_record.release_id",
+      "operation": "replace_literal",
+      "value": "sum20-hist-ap-pilot-r002"
+    },
+    {
+      "id": "modified_target_sha256",
+      "target": "evidence_record.target_sha256",
+      "operation": "flip_last_hex",
+      "rule": "replace last hex digit with 0 unless already 0, then 1"
+    },
+    {
+      "id": "modified_evidence_id",
+      "target": "evidence_record.evidence_id",
+      "operation": "flip_last_hex_digest",
+      "prefix": "ev1-"
+    },
+    {
+      "id": "wrong_target_type",
+      "target": "evidence_record.target_type",
+      "operation": "replace_type",
+      "rule": "number if original type is not number; otherwise string"
+    },
+    {
+      "id": "canonical_value_mutation",
+      "target": "canonical_entry.scalar_at_json_pointer",
+      "operation": "mutate_scalar",
+      "rules": {
+        "string": "append ' [TAMPERED]'",
+        "boolean": "logical NOT",
+        "number": "add 1",
+        "null": "replace with string 'TAMPERED'"
+      }
+    },
+    {
+      "id": "deleted_anchor",
+      "target": "runtime evidence indexes",
+      "operation": "delete_anchor",
+      "rule": "remove evidence_id index and (entry_id,json_pointer) index"
+    }
+  ],
+  "case_construction": {
+    "order": "corruption_classes in listed order × samples in listed order",
+    "case_id_format": "EC-{1-based index:03d}",
+    "expected_case_count": 45,
+    "randomness": "none"
+  }
+}

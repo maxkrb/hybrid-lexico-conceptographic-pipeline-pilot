@@ -1,0 +1,60 @@
+{
+  "schema_version": "lex-entry-v0.4",
+  "dataset_id": "sum20-hist-ap-pilot-v0",
+  "entry_id": "sum20-hist-ap-010",
+  "source": {"raw_path": "data/pilot/raw/010-bryhada.txt", "raw_sha256": "3e6fe9583b9d9deddc5dda07cf20a129209ffbe4d17a99c4426eda51f50496cf", "source_file": "4e21e575-8d98-4c3b-82a1-8f023a00d1ca.docx"},
+  "lemma": {"display": "БРИГА́ДА", "search": "БРИГАДА", "variants": []},
+  "grammar": {"pos": "NOUN", "pos_status": "inferred_from_headword_morphology", "gender": "feminine", "gender_source": "ж.", "genitive_source": "и"},
+  "def_short": "Частина сухопутної армії, що складається з кількох полків, батальйонів або батарей та інших військових частин і підрозділів.",
+  "def_short_source_pointer": "/senses/0/definition",
+  "senses": [
+    {
+      "sense_id": "sum20-hist-ap-010-s1",
+      "labels_source": [],
+      "definition": "Частина сухопутної армії, що складається з кількох полків, батальйонів або батарей та інших військових частин і підрозділів.",
+      "examples": [
+        {"example_id": "sum20-hist-ap-010-s1-e1", "text": "Група штабістів штабу армії і вищого комскладу – командирів дивізій та бригад – з цікавістю оглядали позицію людей другої сотні", "source_ref": "М. Трублаїні"},
+        {"example_id": "sum20-hist-ap-010-s1-e2", "text": "Формувалися загони, окремі дрібні відділи об'єднувалися в полки, бригади і дивізії", "source_ref": "з наук.-попул. літ."},
+        {"example_id": "sum20-hist-ap-010-s1-e3", "text": "Поступово брати Борисови стали центром вільнодумства у своїй артилерійській бригаді", "source_ref": "із журн."}
+      ],
+      "sub_senses": [
+        {"sub_sense_id": "sum20-hist-ap-010-s1a", "labels_source": [], "definition": "Частина флоту, в якій є кілька однотипних військових суден.", "examples": [{"example_id": "sum20-hist-ap-010-s1a-e1", "text": "Бригада субмарин", "source_ref": ""}], "cross_references": []}
+      ],
+      "cross_references": []
+    },
+    {
+      "sense_id": "sum20-hist-ap-010-s2",
+      "labels_source": [],
+      "definition": "Виробнича група людей, які виконують певну колективну роботу.",
+      "examples": [
+        {"example_id": "sum20-hist-ap-010-s2-e1", "text": "Більшість із бригади немолоді вже, вузлуваті, низькорослі.., але як вони взялись до роботи!", "source_ref": "О. Гончар"},
+        {"example_id": "sum20-hist-ap-010-s2-e2", "text": "Їх ціла бригада, тих позначених Божою іскрою сучасників, що .. наклали головою ось в цих мурах", "source_ref": "І. Багряний"},
+        {"example_id": "sum20-hist-ap-010-s2-e3", "text": "В суботу по обіді вся наша мисливська бригада – як було домовлено – збирається біля заводських воріт", "source_ref": "О. Гончар"}
+      ],
+      "sub_senses": [
+        {"sub_sense_id": "sum20-hist-ap-010-s2a", "labels_source": [], "definition": "Персонал, що обслуговує поїзд.", "examples": [{"example_id": "sum20-hist-ap-010-s2a-e1", "text": "Керівництво залізниці відзначило бригаду поїзда", "source_ref": "з газ."}], "cross_references": []}
+      ],
+      "cross_references": []
+    }
+  ],
+  "phrases": [
+    {
+      "phrase_id": "sum20-hist-ap-010-p1",
+      "display": "На́скрізна брига́да",
+      "marker_source": "(1)",
+      "labels_source": ["спец."],
+      "definition": "Бригада працівників різних спеціальностей, які охоплюють своєю діяльністю всі моменти якого-небудь виробничого процесу від початку до кінця.",
+      "examples": [{"example_id": "sum20-hist-ap-010-p1-e1", "text": "– А знаєте, товаришу Тернер, – наче нехотя починає він, – у нас організовується наскрізна бригада по калібрах", "source_ref": "В. Собко"}],
+      "cross_references": []
+    },
+    {
+      "phrase_id": "sum20-hist-ap-010-p2",
+      "display": "Черво́ні брига́ди",
+      "marker_source": "(2)",
+      "labels_source": ["іст."],
+      "definition": "Італійська терористична організація крайньої лівої орієнтації, заснована в 1970 р.",
+      "examples": [{"example_id": "sum20-hist-ap-010-p2-e1", "text": "Правоохоронні органи європейських країн мають дані, що терористичні організації “Сірі вовки” (Туреччина), “Країна басків і воля”, італійські “червоні бригади” мають зв'язки з наркобізнесом", "source_ref": "із журн."}],
+      "cross_references": []
+    }
+  ]
+}

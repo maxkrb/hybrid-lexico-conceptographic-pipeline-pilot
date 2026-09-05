@@ -1,0 +1,43 @@
+{
+  "schema_version": "lex-entry-v0.4",
+  "dataset_id": "sum20-hist-ap-pilot-v0",
+  "entry_id": "sum20-hist-ap-001",
+  "source": {
+    "raw_path": "data/pilot/raw/001-abak.txt",
+    "raw_sha256": "6bd5b9b3923d7c11b018df957321e7e26695a11de05ea7d5ca678eb71b66e560",
+    "source_file": "4e21e575-8d98-4c3b-82a1-8f023a00d1ca.docx"
+  },
+  "lemma": {"display": "АБА́К", "search": "АБАК", "variants": []},
+  "grammar": {
+    "pos": "NOUN",
+    "pos_status": "inferred_from_headword_morphology",
+    "gender": "masculine",
+    "gender_source": "ч.",
+    "genitive_source": "а"
+  },
+  "def_short": "Прилад для рахування, яким користувалися стародавні греки та римляни, – рамка з поперечками, на які нанизані кістяні або кам'яні кульки – одиниці лічби.",
+  "def_short_source_pointer": "/senses/0/definition",
+  "senses": [
+    {
+      "sense_id": "sum20-hist-ap-001-s1",
+      "labels_source": ["іст."],
+      "definition": "Прилад для рахування, яким користувалися стародавні греки та римляни, – рамка з поперечками, на які нанизані кістяні або кам'яні кульки – одиниці лічби.",
+      "examples": [
+        {
+          "example_id": "sum20-hist-ap-001-s1-e1",
+          "text": "Число “тисяча” вселяло в душу Євпраксії жах, тому вона обминала його, доходила тільки до сотень, складала їх з допомогою абака",
+          "source_ref": "П. Загребельний"
+        }
+      ],
+      "cross_references": []
+    },
+    {
+      "sense_id": "sum20-hist-ap-001-s2",
+      "labels_source": ["архт."],
+      "definition": "Те саме, що аба́ка.",
+      "examples": [],
+      "cross_references": [{"relation": "same_as", "target_display": "аба́ка"}]
+    }
+  ],
+  "phrases": []
+}

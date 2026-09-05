@@ -1,0 +1,50 @@
+{
+  "schema_version": "lex-entry-v0.4",
+  "dataset_id": "sum20-hist-ap-pilot-v0",
+  "entry_id": "sum20-hist-ap-023",
+  "source": {
+    "raw_path": "data/pilot/raw/023-pushkar.txt",
+    "raw_sha256": "c0ed4076046e28064d62464130e7a98ac3f6b66317364f1d6b2e7744aba18534",
+    "source_file": "4e21e575-8d98-4c3b-82a1-8f023a00d1ca.docx"
+  },
+  "lemma": {"display": "ПУШКА́Р", "search": "ПУШКАР", "variants": []},
+  "grammar": {"pos": "NOUN", "pos_status": "inferred_from_headword_morphology", "gender": "masculine", "gender_source": "ч.", "genitive_source": "я́"},
+  "def_short": "Майстер, який виготовляв і обслуговував гармати; гармаш.",
+  "def_short_source_pointer": "/senses/0/definition",
+  "senses": [
+    {
+      "sense_id": "sum20-hist-ap-023-s1",
+      "labels_source": ["іст."],
+      "definition": "Майстер, який виготовляв і обслуговував гармати; гармаш.",
+      "examples": [
+        {"example_id": "sum20-hist-ap-023-s1-e1", "text": "– Ти не знаєш, де Сидір живе?.. – Не знаю!.. – одказав Лушня .. – Тут є в вас на пивниці пушкарі, мабуть, вони знають...", "source_ref": "Панас Мирний"},
+        {"example_id": "sum20-hist-ap-023-s1-e2", "text": "Про кожну штуку вмів сказати [Босаковський], який її шабельник або пушкар робив і де, і коли, і скільки вона тепер коштує", "source_ref": "Б. Лепкий"}
+      ],
+      "cross_references": []
+    },
+    {
+      "sense_id": "sum20-hist-ap-023-s2",
+      "labels_source": ["заст.", "розм."],
+      "definition": "Артилерист, гарматник.",
+      "examples": [
+        {"example_id": "sum20-hist-ap-023-s2-e1", "text": "Були тут страшнії гармати, Од вистрілу дрижали хати, А пушкарі то клались ниць", "source_ref": "І. Котляревський"},
+        {"example_id": "sum20-hist-ap-023-s2-e2", "text": "Покликне Сомко на своїх козаків: – До шику! До лави! Пушкарі, риштуйте гармати!", "source_ref": "П. Куліш"},
+        {"example_id": "sum20-hist-ap-023-s2-e3", "text": "– Знайте, що я перший пушкар між козацтвом, а ти будеш перший лучник, а ти – перший на шаблі", "source_ref": "А. Чайковський"},
+        {"example_id": "sum20-hist-ap-023-s2-e4", "text": "Черниш бачив, як заметушилися артилеристи .. Одна з мін вибухнула поблизу пушкарів", "source_ref": "О. Гончар"}
+      ],
+      "cross_references": []
+    },
+    {
+      "sense_id": "sum20-hist-ap-023-s3",
+      "labels_source": ["діал."],
+      "definition": "Озброєний сільський поліцай.",
+      "examples": [
+        {"example_id": "sum20-hist-ap-023-s3-e1", "text": "Старий балакав ненастанно, від зубів давно вже перебіг на колишні порядки в горах, на опришків, на пушкарів, що мали гонити за ними", "source_ref": "І. Франко"},
+        {"example_id": "sum20-hist-ap-023-s3-e2", "text": "Кралевич не помічав, що бесіда набирає небезпечного характеру, що тут може бути поліція – оті пушкарі", "source_ref": "Г. Хоткевич"},
+        {"example_id": "sum20-hist-ap-023-s3-e3", "text": "Народ, підстьобуваний нагайками пушкарів, утворював півколо і далі не поступався", "source_ref": "Р. Іваничук"}
+      ],
+      "cross_references": []
+    }
+  ],
+  "phrases": []
+}

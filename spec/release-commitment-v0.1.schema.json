@@ -4,7 +4,16 @@
   "title": "SUM-20 pilot release commitment",
   "type": "object",
   "additionalProperties": false,
-  "required": ["commitment_version","release_id","release_json","canonicalization","hash_algorithm","release_json_sha256","merkle_root","signature_status"],
+  "required": [
+    "commitment_version",
+    "release_id",
+    "release_json",
+    "canonicalization",
+    "hash_algorithm",
+    "release_json_sha256",
+    "merkle_root",
+    "signature_status"
+  ],
   "properties": {
     "commitment_version": {"const": "release-commitment-v0.1"},
     "release_id": {"type": "string", "pattern": "^sum20-hist-ap-pilot-r[0-9]{3}$"},

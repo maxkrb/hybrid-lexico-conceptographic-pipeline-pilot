@@ -1,0 +1,62 @@
+{
+  "schema_version": "lex-entry-v0.4",
+  "dataset_id": "sum20-hist-ap-pilot-v0",
+  "entry_id": "sum20-hist-ap-018",
+  "source": {"raw_path": "data/pilot/raw/018-otaman.txt", "raw_sha256": "0cf6eea86706cd31c7793e93b08ec87473fd9c62e407c92e1b39bf7f9cd1f7ed", "source_file": "4e21e575-8d98-4c3b-82a1-8f023a00d1ca.docx"},
+  "lemma": {"display": "ОТА́МАН", "search": "ОТАМАН", "variants": []},
+  "grammar": {"pos": "NOUN", "pos_status": "inferred_from_headword_morphology", "gender": "masculine", "gender_source": "ч.", "genitive_source": "а"},
+  "def_short": "Виборний або призначений ватажок козацького війська.",
+  "def_short_source_pointer": "/senses/0/definition",
+  "senses": [
+    {"sense_id": "sum20-hist-ap-018-s1", "labels_source": ["іст."], "definition": "Виборний або призначений ватажок козацького війська.", "examples": [
+      {"example_id": "sum20-hist-ap-018-s1-e1", "text": "То не козак, що отаманом не думає бути", "source_ref": "прислів'я"},
+      {"example_id": "sum20-hist-ap-018-s1-e2", "text": "Підійшов відважний Степан Разя, отаман козацтва донського, привітався", "source_ref": "Я. Качура"},
+      {"example_id": "sum20-hist-ap-018-s1-e3", "text": "Полковники і сотники з полковою і сотенною старшиною (обозні, судді, осавули, писарі, отамани) здійснювали військову, політичну, судову, адміністративну владу над населенням полків і сотень", "source_ref": "О. Апанович"},
+      {"example_id": "sum20-hist-ap-018-s1-e4", "text": "З тещі був справжній отаман, неждано рішучий, бездонно дотепний, неправдоподібно хитрий", "source_ref": "Олекса Ізарський", "labels_source": ["* Образно."]}
+    ], "sub_senses": [
+      {"sub_sense_id": "sum20-hist-ap-018-s1a", "labels_source": [], "definition": "Представник козацької адміністрації у населених пунктах в Україні XVII–XVIII ст.", "examples": [
+        {"example_id": "sum20-hist-ap-018-s1a-e1", "text": "Отаман Савку раз побив, Савка думає, що й Голова, й поліція Отамана боїться!", "source_ref": "Л. Боровиковський"},
+        {"example_id": "sum20-hist-ap-018-s1a-e2", "text": "У відчинені двері зайшов до ратуші, широко позіхаючи і хрестячи рота, городовий отаман Степан Лобода", "source_ref": "Валерій Шевчук"}
+      ], "cross_references": []}
+    ], "cross_references": []},
+    {"sense_id": "sum20-hist-ap-018-s2", "labels_source": ["іст."], "definition": "У Росії до 1917 р. – начальник козачих військ і поселень, що виконував військові, поліційні та адміністративні функції.", "examples": [
+      {"example_id": "sum20-hist-ap-018-s2-e1", "text": "Ось окремі фотографії, теж дореволюційні: козацькі осавули, хорунжі, отамани... Всі з лампасами... Це все давні світлини", "source_ref": "І. Багряний"},
+      {"example_id": "sum20-hist-ap-018-s2-e2", "text": "Народився Олександр Юхимович [Півень] 3 липня 1872 р. у ст. Павлівській Єйського відділу, був учителем, станичним отаманом", "source_ref": "Д. Білий"}
+    ], "cross_references": []},
+    {"sense_id": "sum20-hist-ap-018-s3", "labels_source": ["іст."], "definition": "Штаб-офіцерське (старшинське) військове звання в українських військових формуваннях початку XX ст.", "examples": [
+      {"example_id": "sum20-hist-ap-018-s3-e1", "text": "Купу кінного козацтва головного отамана Симона Петлюри вів Половець Оверко", "source_ref": "Ю. Яновський"},
+      {"example_id": "sum20-hist-ap-018-s3-e2", "text": "Звання отамана Української Галицької Армії було еквівалентом майора у сучасних Збройних силах України", "source_ref": "з наук.-попул. літ."}
+    ], "cross_references": []},
+    {"sense_id": "sum20-hist-ap-018-s4", "labels_source": ["заст."], "definition": "Ватажок, керівник.", "examples": [
+      {"example_id": "sum20-hist-ap-018-s4-e1", "text": "Старший брат і усім отаман сидить, люлька його згасла і дивиться він у землю", "source_ref": "Марко Вовчок"},
+      {"example_id": "sum20-hist-ap-018-s4-e2", "text": "На майдані коло церкви революція іде. – Хай чабан! – усі гукнули, – За отамана буде", "source_ref": "П. Тичина"}
+    ], "sub_senses": [
+      {"sub_sense_id": "sum20-hist-ap-018-s4a", "labels_source": [], "definition": "Той, хто очолює яку-небудь групу людей.", "examples": [
+        {"example_id": "sum20-hist-ap-018-s4a-e1", "text": "Табір ще спить. Тільки не спить чогось чумацький отаман... не спить, по табору ходить...", "source_ref": "М. Коцюбинський"},
+        {"example_id": "sum20-hist-ap-018-s4a-e2", "text": "Я впізнав голос отамана рибальської ватаги", "source_ref": "Ю. Яновський"}
+      ], "cross_references": []}
+    ], "cross_references": []}
+  ],
+  "phrases": [
+    {"phrase_id": "sum20-hist-ap-018-p1", "display": "Вести́ ота́мана", "marker_source": "", "labels_source": [], "definition": null, "examples": [], "cross_references": [{"relation": "see", "target_display": "вести́"}]},
+    {"phrase_id": "sum20-hist-ap-018-p2", "display": "За ота́мана ходи́ти", "marker_source": "", "labels_source": [], "definition": null, "examples": [], "cross_references": [{"relation": "see", "target_display": "ходи́ти"}]},
+    {"phrase_id": "sum20-hist-ap-018-p3", "display": "Кошови́й ота́ман", "marker_source": "(1)", "labels_source": ["іст."], "definition": "Виборна службова особа в Запорозькій Січі (XVI–XVIII ст.).", "examples": [
+      {"example_id": "sum20-hist-ap-018-p3-e1", "text": "Кошовому отаману належала найвища адміністративна, військова та судова влада", "source_ref": "з наук. літ."},
+      {"example_id": "sum20-hist-ap-018-p3-e2", "text": "Останнім кошовим отаманом був Петро Калнишевський", "source_ref": "з навч. літ."}
+    ], "cross_references": []},
+    {"phrase_id": "sum20-hist-ap-018-p4", "display": "Курінни́й ота́ман", "marker_source": "(2)", "labels_source": ["іст."], "definition": null, "examples": [], "sub_senses": [
+      {"sub_sense_id": "sum20-hist-ap-018-p4a", "labels_source": [], "definition": "Виборна особа, що керувала куренем (у 3 знач.).", "examples": [
+        {"example_id": "sum20-hist-ap-018-p4a-e1", "text": "Тілько три чайки, слава Богу, Отамана курінного, Сироти Степана молодого, Синє море не втопило", "source_ref": "Т. Шевченко"},
+        {"example_id": "sum20-hist-ap-018-p4a-e2", "text": "[Горобець:] Дозволь слово мовити, курінний отамане", "source_ref": "О. Корнійчук"}
+      ], "cross_references": []},
+      {"sub_sense_id": "sum20-hist-ap-018-p4b", "labels_source": [], "definition": "Ватажок куреня (у 5 знач.).", "examples": [
+        {"example_id": "sum20-hist-ap-018-p4b-e1", "text": "Курінним отаманом українських січових стрільців був 37-річний Степан Шухевич", "source_ref": "з наук. літ."},
+        {"example_id": "sum20-hist-ap-018-p4b-e2", "text": "22 березня 1915 року сотні курінного отамана С. Горука зайняли позиції на горі Маківка, яка була ключовим пунктом оборони Південної австрійської армії, тому що перешкоджала російським військам вийти по долинах річок до Тухлі і Славського", "source_ref": "з наук.-попул. літ."}
+      ], "cross_references": []}
+    ], "cross_references": []},
+    {"phrase_id": "sum20-hist-ap-018-p5", "display": "Наказни́й (вата́жний) ота́ман", "marker_source": "(3)", "labels_source": ["іст."], "definition": "В Україні в XVII–XVIII ст. – особа, що тимчасово обіймала посаду отамана.", "examples": [
+      {"example_id": "sum20-hist-ap-018-p5-e1", "text": "Запорозький Кіш .. вирядив на грецьку війну полк запорожців, а наказним отаманом у той похід призначив Мороза", "source_ref": "А. Кащенко"},
+      {"example_id": "sum20-hist-ap-018-p5-e2", "text": "Про життя талановитого українського письмовця, наказного отамана Війська Чорноморського Якова Герасимовича Кухаренка, маємо дуже мало звісток", "source_ref": "М. Коцюбинський"}
+    ], "cross_references": []}
+  ]
+}

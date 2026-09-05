@@ -1,0 +1,138 @@
+{
+  "experiment_id": "p1-evidence-corruption-posthardening-v0.1",
+  "release_id": "sum20-hist-ap-pilot-r001",
+  "corruption_profile_id": "p1-evidence-corruption-profile-v0.1",
+  "case_manifest_id": "p1-evidence-corruption-cases-v0.1",
+  "case_manifest_file": "eval/evidence-corruption-cases-v0.1.json",
+  "case_manifest_jcs_sha256": "1eedbef2c162788c02b9944ba6ad9403ff33305939fe33cac6442bb260eeccc4",
+  "profile": {
+    "total_injections": 45,
+    "corruption_classes": [
+      "bad_json_pointer",
+      "stale_content_sha256",
+      "wrong_entry_id",
+      "wrong_release_id",
+      "modified_target_sha256",
+      "modified_evidence_id",
+      "wrong_target_type",
+      "canonical_value_mutation",
+      "deleted_anchor"
+    ],
+    "sample_classes": [
+      "def_short",
+      "lemma_display",
+      "grammar_pos",
+      "sense_definition",
+      "example_text"
+    ],
+    "frozen_artifacts_mutated": false,
+    "method": "in-memory application of exact versioned case descriptors"
+  },
+  "full_contract_verifier": {
+    "injected": 45,
+    "detected": 45,
+    "EVDR": 1.0,
+    "by_class": {
+      "bad_json_pointer": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "stale_content_sha256": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "wrong_entry_id": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "wrong_release_id": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "modified_target_sha256": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "modified_evidence_id": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "wrong_target_type": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "canonical_value_mutation": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "deleted_anchor": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      }
+    },
+    "undetected": []
+  },
+  "baseline_reference": "eval/evidence-corruption-results-prehardening-v0.1.json",
+  "runtime_post_hardening": {
+    "injected": 45,
+    "detected": 45,
+    "EVDR": 1.0,
+    "by_class": {
+      "bad_json_pointer": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "stale_content_sha256": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "wrong_entry_id": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "wrong_release_id": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "modified_target_sha256": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "modified_evidence_id": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "wrong_target_type": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "canonical_value_mutation": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      },
+      "deleted_anchor": {
+        "injected": 5,
+        "detected": 5,
+        "rate": 1.0
+      }
+    },
+    "undetected": []
+  }
+}

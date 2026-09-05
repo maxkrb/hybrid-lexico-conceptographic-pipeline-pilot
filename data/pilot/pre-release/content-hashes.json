@@ -1,0 +1,134 @@
+{
+  "dataset_id": "sum20-hist-ap-pilot-v0",
+  "schema_version": "lex-entry-v0.4",
+  "canonicalization": "RFC8785-JCS",
+  "hash_algorithm": "SHA-256",
+  "entry_count": 25,
+  "entries": [
+    {
+      "entry_id": "sum20-hist-ap-001",
+      "canonical_file": "data/pilot/canonical/001-abak.json",
+      "content_sha256": "5ba082967e2af654d972507486a3f9e5511dce2558d51f4c676eb5434b8537a5"
+    },
+    {
+      "entry_id": "sum20-hist-ap-002",
+      "canonical_file": "data/pilot/canonical/002-ayil.json",
+      "content_sha256": "ee0c99cd3cd9e932000efb97aa80e956bf1814157eb2b9626bc4d71f1e028bf3"
+    },
+    {
+      "entry_id": "sum20-hist-ap-003",
+      "canonical_file": "data/pilot/canonical/003-akt.json",
+      "content_sha256": "eb663c07bb083e1e500132b28e83e97922c6c32bf4cd936e1edb71aa90c637d8"
+    },
+    {
+      "entry_id": "sum20-hist-ap-004",
+      "canonical_file": "data/pilot/canonical/004-arkhetyp.json",
+      "content_sha256": "ec4961472c82d28293c753171d75a936801eab0daa9bd4b42a0e29019ab1c144"
+    },
+    {
+      "entry_id": "sum20-hist-ap-005",
+      "canonical_file": "data/pilot/canonical/005-audytor.json",
+      "content_sha256": "63d7175bb84906d9123000de49727c861849dc432f1e20aae3cdeac7e32fcc47"
+    },
+    {
+      "entry_id": "sum20-hist-ap-006",
+      "canonical_file": "data/pilot/canonical/006-baida.json",
+      "content_sha256": "ac1e33e86f1c926f95a6bffe7f72225d8669ae780243ac808e10d8e89499d414"
+    },
+    {
+      "entry_id": "sum20-hist-ap-007",
+      "canonical_file": "data/pilot/canonical/007-bakalavr.json",
+      "content_sha256": "462d47cbfa45211f1df4c1f0852fd4078bfa918f156a55c8da83fb6ba5007823"
+    },
+    {
+      "entry_id": "sum20-hist-ap-008",
+      "canonical_file": "data/pilot/canonical/008-bilyi.json",
+      "content_sha256": "2ea06f3c5df67678733d4e0f81ee561269d2c660a4d4ad7fd77ef7d07cb30721"
+    },
+    {
+      "entry_id": "sum20-hist-ap-009",
+      "canonical_file": "data/pilot/canonical/009-bombardyr.json",
+      "content_sha256": "a35df3bdaac557ce18145d54ba12a7f9cead4a65a55f72b7792d2bb3d85e1478"
+    },
+    {
+      "entry_id": "sum20-hist-ap-010",
+      "canonical_file": "data/pilot/canonical/010-bryhada.json",
+      "content_sha256": "1465ac0aa65b4b5e299d4b20eb1a69aab06d322eaf11d78f8e5dd23961110706"
+    },
+    {
+      "entry_id": "sum20-hist-ap-011",
+      "canonical_file": "data/pilot/canonical/011-hramota-2.json",
+      "content_sha256": "89d6829861e78286adfb55710e6069245e71841d10c11599d3a6c74d96e7748a"
+    },
+    {
+      "entry_id": "sum20-hist-ap-012",
+      "canonical_file": "data/pilot/canonical/012-etap.json",
+      "content_sha256": "52ec6f2651492444741c74ef1e8b118dd74cf56170f728451a3854c845a7aa82"
+    },
+    {
+      "entry_id": "sum20-hist-ap-013",
+      "canonical_file": "data/pilot/canonical/013-zhaluvaty.json",
+      "content_sha256": "2e40cd2c07098ba0d1e8fe9707efbb2ba262ecff6c89b15976c3a5594657c252"
+    },
+    {
+      "entry_id": "sum20-hist-ap-014",
+      "canonical_file": "data/pilot/canonical/014-zymovyk.json",
+      "content_sha256": "a9b54cf1fae6dfb0a562dede2d29f1f909a01962f3cd6342fc8364baac087713"
+    },
+    {
+      "entry_id": "sum20-hist-ap-015",
+      "canonical_file": "data/pilot/canonical/015-klas.json",
+      "content_sha256": "e642997b7faa8e92f527b22cd1fe1181f02a2b80a3c491d3305511dfdb4c01a9"
+    },
+    {
+      "entry_id": "sum20-hist-ap-016",
+      "canonical_file": "data/pilot/canonical/016-knyha.json",
+      "content_sha256": "bd1a121bb25de228337a1b40001370965d67cebc3c1e58b1acab58091f8dc261"
+    },
+    {
+      "entry_id": "sum20-hist-ap-017",
+      "canonical_file": "data/pilot/canonical/017-libra.json",
+      "content_sha256": "4b04cfd3c6399ea78fa4ff20c2c147bea3b5ccb19a30df92ba9603fa6db38a1a"
+    },
+    {
+      "entry_id": "sum20-hist-ap-018",
+      "canonical_file": "data/pilot/canonical/018-otaman.json",
+      "content_sha256": "676553c955d9ff721e29ed5b8819d125f5a0075e6fa59cec7c7da0c29d3ba27c"
+    },
+    {
+      "entry_id": "sum20-hist-ap-019",
+      "canonical_file": "data/pilot/canonical/019-pravo.json",
+      "content_sha256": "092ed556d1591ba3e5b416add87ba1bbc7322e0bbdbb11566dc7997fca231208"
+    },
+    {
+      "entry_id": "sum20-hist-ap-020",
+      "canonical_file": "data/pilot/canonical/020-promysel.json",
+      "content_sha256": "3958408745819b508c2d14ccf20590afd9fdfd8f5dfcf5e079f86fed1af2873a"
+    },
+    {
+      "entry_id": "sum20-hist-ap-021",
+      "canonical_file": "data/pilot/canonical/021-propyska.json",
+      "content_sha256": "76ed86d207f8d278b2878c3db8a04cf16bf8bbaebee5abcfd99508ada7bc2ccd"
+    },
+    {
+      "entry_id": "sum20-hist-ap-022",
+      "canonical_file": "data/pilot/canonical/022-pudra.json",
+      "content_sha256": "f5d73fbd2e25bf16e59f5833502f25d741ff191b19cc319cf4d8ba33197a46c2"
+    },
+    {
+      "entry_id": "sum20-hist-ap-023",
+      "canonical_file": "data/pilot/canonical/023-pushkar.json",
+      "content_sha256": "b37def5591f53bc5b3dac6465a76b3c1894722c56bc3b21db261be2655f1be52"
+    },
+    {
+      "entry_id": "sum20-hist-ap-024",
+      "canonical_file": "data/pilot/canonical/024-piatyna.json",
+      "content_sha256": "05e7aca8c1418640f0737dc512041e9709de4b265cb8b3ca3de714bb180d7bcd"
+    },
+    {
+      "entry_id": "sum20-hist-ap-025",
+      "canonical_file": "data/pilot/canonical/025-piatyrichka.json",
+      "content_sha256": "8fd2efc1c8e5e0781e7f728b1011685aa149626ec98f7165490b4b322b3b96e6"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "lex-entry-v0.4",
+  "dataset_id": "sum20-hist-ap-pilot-v0",
+  "entry_id": "sum20-hist-ap-006",
+  "source": {
+    "raw_path": "data/pilot/raw/006-baida.txt",
+    "raw_sha256": "acb7310ad971e5861b23c9bfc446ad53df44d53c4e05a97b07961f28a0eeb0a4",
+    "source_file": "4e21e575-8d98-4c3b-82a1-8f023a00d1ca.docx"
+  },
+  "lemma": {
+    "display": "БА́ЙДА",
+    "search": "БАЙДА",
+    "variants": []
+  },
+  "grammar": {
+    "pos": "NOUN",
+    "pos_status": "inferred_from_headword_morphology",
+    "genitive_source": "и"
+  },
+  "def_short": "Безтурботна, гуляща людина, гульвіса.",
+  "def_short_source_pointer": "/senses/0/definition",
+  "senses": [
+    {
+      "sense_id": "sum20-hist-ap-006-s1",
+      "labels_source": ["рідко."],
+      "morphology_source": {"gender": "ч. і ж."},
+      "definition": "Безтурботна, гуляща людина, гульвіса.",
+      "examples": [{"example_id": "sum20-hist-ap-006-s1-e1", "text": "Всім до мене байдам байдуже", "source_ref": "М. Бажан"}],
+      "cross_references": []
+    },
+    {
+      "sense_id": "sum20-hist-ap-006-s2",
+      "labels_source": ["тільки ж.", "іст."],
+      "definition": "Довбаний човен.",
+      "examples": [
+        {"example_id": "sum20-hist-ap-006-s2-e1", "text": "Байда тихенько пливла за течією", "source_ref": "І. Багряний"},
+        {"example_id": "sum20-hist-ap-006-s2-e2", "text": "Ближче і далі по морю видніють .. фелюги, байди і ледве примітні при воді каюки, баркаси – всі виходять у відкрите море", "source_ref": "О. Гончар"}
+      ],
+      "cross_references": []
+    },
+    {
+      "sense_id": "sum20-hist-ap-006-s3",
+      "labels_source": ["тільки ж.", "діал."],
+      "definition": "Шматок, грудка чого-небудь ламкого або крихкого (хліба, цукру, дерева).",
+      "examples": [{"example_id": "sum20-hist-ap-006-s3-e1", "text": "Ґалаґан маю в хустині зав'язаний, булок повні пазухи та й цукру добру байду", "source_ref": "В. Стефаник"}],
+      "cross_references": []
+    }
+  ],
+  "phrases": [
+    {
+      "phrase_id": "sum20-hist-ap-006-p1",
+      "display": "Ба́йдики (ба́йди, діал. га́ндри) би́ти",
+      "marker_source": "◇",
+      "labels_source": [],
+      "definition": null,
+      "examples": [],
+      "cross_references": [{"relation": "see", "target_display": "би́ти"}]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "lex-entry-v0.4",
+  "dataset_id": "sum20-hist-ap-pilot-v0",
+  "entry_id": "sum20-hist-ap-009",
+  "source": {"raw_path": "data/pilot/raw/009-bombardyr.txt", "raw_sha256": "caedd7739300c054c659123f25d24c13d8c326058af15441aadf3d8470e610c3", "source_file": "4e21e575-8d98-4c3b-82a1-8f023a00d1ca.docx"},
+  "lemma": {"display": "БОМБАРДИ́Р", "search": "БОМБАРДИР", "variants": []},
+  "grammar": {"pos": "NOUN", "pos_status": "inferred_from_headword_morphology", "gender": "masculine", "gender_source": "ч.", "genitive_source": "а"},
+  "def_short": "У XVII–XIX ст. – боєць, який обслуговував гаубиці, мортири і т. ін.",
+  "def_short_source_pointer": "/senses/0/definition",
+  "senses": [
+    {"sense_id": "sum20-hist-ap-009-s1", "labels_source": ["іст."], "definition": "У XVII–XIX ст. – боєць, який обслуговував гаубиці, мортири і т. ін.", "examples": [
+      {"example_id": "sum20-hist-ap-009-s1-e1", "text": "Звичайно, колишньому бомбардиру-наводчикові, а нинішньому помічникові командира полку, цебто помічникові Івана Панасовича, не до Варі було", "source_ref": "М. Хвильовий"},
+      {"example_id": "sum20-hist-ap-009-s1-e2", "text": "Царя я вперше побачив наступного дня, у неділю вранці, він прислав бомбардира зі звісткою, що його величність зволить відвідати пана гетьмана увечері", "source_ref": "Ю. Мушкетик"}
+    ], "cross_references": []},
+    {"sense_id": "sum20-hist-ap-009-s2", "labels_source": ["спорт."], "definition": "У командних спортивних іграх – найрезультативніший гравець, який забиває багато голів у ворота противника.", "examples": [
+      {"example_id": "sum20-hist-ap-009-s2-e1", "text": "Один із кращих бомбардирів іспанського чемпіонату буквально вбив головою м'яч під самісіньку перекладину воріт", "source_ref": "з газ."},
+      {"example_id": "sum20-hist-ap-009-s2-e2", "text": "Андрій Шевченко в неділю повернув собі лідерство у змаганні бомбардирів", "source_ref": "з газ."}
+    ], "cross_references": []}
+  ],
+  "phrases": []
+}
