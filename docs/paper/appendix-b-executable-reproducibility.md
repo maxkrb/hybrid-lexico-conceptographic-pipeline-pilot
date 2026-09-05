@@ -55,59 +55,33 @@ There are eight pilot workflows in `.github/workflows/`.
 | `evaluate-evidence-corruption.yml` | Generate exact P1 fault manifest and run post-hardening corruption experiment | `generate_evidence_corruption_cases.py` → `evaluate_evidence_corruption_post.py` → regenerate/cmp case manifest |
 | `build-p3-release.yml` | Complete P3 build, verification, TDR experiment, and byte-for-byte regeneration | `build_release.py` → `verify_release.py` → `generate_release_tamper_cases.py` → `evaluate_release_tamper.py` → repeat all → `cmp` four generated artifacts |
 
-## B.5 P3 Action and commit provenance
+## B.5 Public Stage-2 CI provenance
 
-The P3 workflow `.github/workflows/build-p3-release.yml` was introduced in the implementation commit:
+The public reproducibility package was validated on the `publication-package-staging` branch before final package hashing. To prevent CI write-back during this validation, the four workflows that normally have `contents: write` were exercised as temporary staging-only read-only variants: their push trigger was scoped to `publication-package-staging`, permissions were reduced to `contents: read`, and the commit/push step was replaced by a final `git diff --exit-code` check over the generated artifacts. The four inherently read-only workflows were executed without semantic modification.
 
-```text
-3f450fbf926409ebcaa9ba80909064862551fd3d
-Implement deterministic P3 release and tamper evaluation
-```
+The eight public Stage-2 validation runs were:
 
-That same commit introduced the normative P3 schemas/profile and the builder/verifier/tamper generator/evaluator implementation used by the first reference CI run.
+| Workflow | Run ID | Head SHA | Validation mode | Conclusion |
+|---|---:|---|---|---|
+| Build content commitments | `33955994436` | `efaa358dbbd9b4f6a76eb2ab0cd40707a67e7883` | canonical read-only workflow | success |
+| Validate canonical pilot | `33956004234` | `77642daa497e05c421cef7e591719db87d26537c` | canonical read-only workflow | success |
+| Validate evidence contract | `33956010693` | `3b0f440267f9680f3c0d087c7fabd5470097bd4a` | canonical read-only workflow | success |
+| Validate minimal P1 API | `33956015588` | `ffc7735624cb69d0166408e4fa457fd02000ac70` | canonical read-only workflow | success |
+| Generate evidence registry | `33956021965` | `695b6496e78607f75e5e172970502f04b12135d6` | staging-only read-only regeneration check | success |
+| Build P1 evaluation set | `33956029161` | `27a2fdf11c1bc7ad5be92cd4c8223c6f970069d7` | staging-only read-only regeneration check | success |
+| Evaluate evidence corruption | `33956036695` | `137b40f402a76419e6d63c5cdd24d6218c4b362f` | staging-only read-only regeneration check | success |
+| Build P3 release and TDR | `33956045858` | `0b03263a4cee889fd0ae53d5c0aa2651ee90067c` | staging-only read-only regeneration check | success |
 
-The first P3 GitHub Actions execution was:
+For each generator workflow, the final `Verify generated artifacts match committed snapshot` step completed successfully. The P3 run additionally rebuilt `release.json`, `release-commitment.json`, the 30-case tamper manifest, and the TDR results, repeated the complete builder/verifier/generator/evaluator sequence, byte-compared the regenerated artifacts, and then confirmed that no generated file differed from the committed public snapshot.
 
-```text
-workflow: Build P3 release and TDR
-run_id: 33885931217
-run_number: 1
-event: push
-head_sha: 3f450fbf926409ebcaa9ba80909064862551fd3d
-conclusion: success
-```
-
-The successful workflow generated and froze the deterministic release and TDR artifacts through:
+After these checks, the four writer workflows were restored byte-for-byte to their canonical production definitions. The resulting public workflow set is fixed at commit:
 
 ```text
-d7f3ddb07314c29c87b03247d9c16591c72d328a
-Freeze deterministic P3 release and tamper results
+779bc855508ec58319c435a19aa398aad45b85a6
+Stage 2: restore canonical P3 release workflow
 ```
 
-The frozen generated set comprises:
-
-```text
-data/pilot/release/release.json
-data/pilot/release/release-commitment.json
-eval/release-tamper-cases-v0.1.json
-eval/release-tamper-results-v0.1.json
-```
-
-After P3 materialization, the lifecycle record was promoted from `reserved` to `released` in:
-
-```text
-2901fd6c6d4540ae4f0c5ff35876d587137e2c43
-Mark r001 release reservation as materialized
-```
-
-A subsequent P3 workflow run on that state transition also completed successfully. The Evidence Registry generator initially exposed a lifecycle assumption (`state=reserved` only); this was corrected without changing the 840-record generated registry in:
-
-```text
-5e7cdfd953f054e33f10eb788437e2d3d675ed4d
-Allow deterministic P1 evidence rebuild after release materialization
-```
-
-The post-fix Evidence Registry CI regenerated 25 entries / 840 records, passed its byte-for-byte check, and reported the committed registry already current.
+At that commit, all eight `.github/workflows/*.yml` blobs match the canonical source-package workflow blobs exactly. The validation runs therefore provide public executable provenance for the imported frozen artifacts without treating the temporary staging checks as a second scientific release or as an independent cryptographic trust anchor.
 
 ## B.6 P3 byte-for-byte reproducibility contract
 
