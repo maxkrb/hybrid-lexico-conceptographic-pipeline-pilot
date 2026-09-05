@@ -1,0 +1,38 @@
+name: Validate evidence contract
+
+on:
+  push:
+    paths:
+      - 'spec/evidence-record-v0.1.schema.json'
+      - 'docs/pilot/evidence-binding.md'
+      - 'data/pilot/pre-release/release-reservation.json'
+      - 'data/pilot/pre-release/evidence-example.json'
+      - 'data/pilot/pre-release/content-hashes.json'
+      - 'data/pilot/canonical/**'
+      - 'scripts/validate_evidence_contract.py'
+      - 'requirements-pilot.txt'
+      - '.github/workflows/validate-evidence-contract.yml'
+  pull_request:
+    paths:
+      - 'spec/evidence-record-v0.1.schema.json'
+      - 'docs/pilot/evidence-binding.md'
+      - 'data/pilot/pre-release/release-reservation.json'
+      - 'data/pilot/pre-release/evidence-example.json'
+      - 'data/pilot/pre-release/content-hashes.json'
+      - 'data/pilot/canonical/**'
+      - 'scripts/validate_evidence_contract.py'
+      - 'requirements-pilot.txt'
+      - '.github/workflows/validate-evidence-contract.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements-pilot.txt
+      - name: Validate P1 evidence contract
+        run: python scripts/validate_evidence_contract.py
