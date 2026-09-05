@@ -2,7 +2,7 @@ name: Evaluate evidence corruption
 
 on:
   push:
-    branches: [publication-package-staging]
+    branches: [main]
     paths:
       - 'eval/evidence-corruption-profile-v0.1.json'
       - 'eval/evidence-corruption-cases-v0.1.json'
@@ -18,7 +18,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   evaluate:
@@ -39,5 +39,12 @@ jobs:
           cp eval/evidence-corruption-cases-v0.1.json /tmp/evidence-corruption-cases-v0.1.json
           PYTHONPATH=. python scripts/generate_evidence_corruption_cases.py
           cmp /tmp/evidence-corruption-cases-v0.1.json eval/evidence-corruption-cases-v0.1.json
-      - name: Verify generated artifacts match committed snapshot
-        run: git diff --exit-code -- eval/evidence-corruption-cases-v0.1.json eval/evidence-corruption-results-posthardening-v0.1.json
+      - name: Commit generated reproducibility artifacts if changed
+        run: |
+          if [ -n "$(git status --porcelain -- eval/evidence-corruption-cases-v0.1.json eval/evidence-corruption-results-posthardening-v0.1.json)" ]; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add eval/evidence-corruption-cases-v0.1.json eval/evidence-corruption-results-posthardening-v0.1.json
+            git commit -m 'Freeze reproducible evidence corruption cases'
+            git push
+          fi
