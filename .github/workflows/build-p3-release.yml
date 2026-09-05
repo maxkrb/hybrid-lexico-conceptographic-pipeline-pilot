@@ -1,0 +1,62 @@
+name: Build P3 release and TDR
+
+on:
+  push:
+    branches: [publication-package-staging]
+    paths:
+      - 'spec/release-v0.1.schema.json'
+      - 'spec/release-commitment-v0.1.schema.json'
+      - 'spec/merkle-profile-v0.1.json'
+      - 'src/release_integrity.py'
+      - 'scripts/build_release.py'
+      - 'scripts/verify_release.py'
+      - 'scripts/generate_release_tamper_cases.py'
+      - 'scripts/evaluate_release_tamper.py'
+      - 'eval/release-tamper-profile-v0.1.json'
+      - 'eval/release-tamper-cases-v0.1.json'
+      - 'eval/release-tamper-results-v0.1.json'
+      - 'data/pilot/pre-release/content-hashes.json'
+      - 'data/pilot/pre-release/release-reservation.json'
+      - 'data/pilot/canonical/**'
+      - 'data/pilot/release/release.json'
+      - 'data/pilot/release/release-commitment.json'
+      - '.github/workflows/build-p3-release.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-verify-evaluate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned pilot dependencies
+        run: python -m pip install -r requirements-pilot.txt
+      - name: Build deterministic release artifacts
+        run: PYTHONPATH=. python scripts/build_release.py
+      - name: Verify base release
+        run: PYTHONPATH=. python scripts/verify_release.py
+      - name: Generate exact deterministic release-tamper cases
+        run: PYTHONPATH=. python scripts/generate_release_tamper_cases.py
+      - name: Evaluate release tamper detection
+        run: PYTHONPATH=. python scripts/evaluate_release_tamper.py
+      - name: Rebuild all generated P3 artifacts and compare byte-for-byte
+        run: |
+          cp data/pilot/release/release.json /tmp/release.json
+          cp data/pilot/release/release-commitment.json /tmp/release-commitment.json
+          cp eval/release-tamper-cases-v0.1.json /tmp/release-tamper-cases-v0.1.json
+          cp eval/release-tamper-results-v0.1.json /tmp/release-tamper-results-v0.1.json
+          PYTHONPATH=. python scripts/build_release.py
+          PYTHONPATH=. python scripts/verify_release.py
+          PYTHONPATH=. python scripts/generate_release_tamper_cases.py
+          PYTHONPATH=. python scripts/evaluate_release_tamper.py
+          cmp /tmp/release.json data/pilot/release/release.json
+          cmp /tmp/release-commitment.json data/pilot/release/release-commitment.json
+          cmp /tmp/release-tamper-cases-v0.1.json eval/release-tamper-cases-v0.1.json
+          cmp /tmp/release-tamper-results-v0.1.json eval/release-tamper-results-v0.1.json
+      - name: Verify generated artifacts match committed snapshot
+        run: git diff --exit-code -- data/pilot/release/release.json data/pilot/release/release-commitment.json eval/release-tamper-cases-v0.1.json eval/release-tamper-results-v0.1.json
